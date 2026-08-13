@@ -140,9 +140,10 @@ class MainWindow(QMainWindow):
         for i, btn in enumerate(buttons):
             btn.setChecked(i == page_index)
 
-        if page_index == 0:
-            self.page_reflex.load_next_question()
-        elif page_index == 1:
+        if page_index != 0 and self.page_reflex.is_running:
+            self.page_reflex._stop_session()
+
+        if page_index == 1:
             self._refresh_data_table()
 
     def _create_data_table_view(self) -> QWidget:

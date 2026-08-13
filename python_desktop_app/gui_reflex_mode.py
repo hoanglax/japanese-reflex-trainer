@@ -6,7 +6,7 @@ Architecture Layer: View / Interactive Presentation Layer
 Chức năng:
 1. Hiển thị đề bài phản xạ ngẫu nhiên (Nhật -> Việt hoặc Việt -> Nhật).
 2. Đồng hồ đếm ngược thời gian phản xạ (Timer) tạo áp lực rèn luyện.
-3. Nhập câu trả lời và gửi tới Gemini AI để chấm điểm, sửa ngữ pháp & phân tích sắc thái.
+3. Nhập câu trả lời và so khớp trực tiếp với đáp án có sẵn (không gọi AI -> không lag).
 4. Hỗ trợ phím tắt Enter, Space.
 """
 
@@ -30,6 +30,7 @@ class ReflexModeWidget(QWidget):
         self.time_limit_sec = 10
         self.remaining_sec = 10
         self.direction = "jp-to-vi" # "jp-to-vi" hoặc "vi-to-jp"
+        self.is_running = False # Phiên luyện tập đang chạy hay chưa
 
         self.timer = QTimer(self)
         self.timer.setInterval(1000)
@@ -53,17 +54,30 @@ class ReflexModeWidget(QWidget):
         self.cbo_timer.setCurrentIndex(1)
         self.cbo_timer.currentIndexChanged.connect(self._on_timer_config_changed)
 
-        btn_start_new = QPushButton("🎲 Đổi Câu Khác (Shortcut: Enter/Space)")
-        btn_start_new.setStyleSheet("background-color: #00838f; color: white; font-weight: bold; padding: 6px 12px;")
-        btn_start_new.clicked.connect(self.load_next_question)
+        self.btn_start_new = QPushButton("🎲 Đổi Câu Khác")
+        self.btn_start_new.setStyleSheet("background-color: #00838f; color: white; font-weight: bold; padding: 6px 12px;")
+        self.btn_start_new.clicked.connect(self.load_next_question)
+        self.btn_start_new.setEnabled(False)
 
         cfg_layout.addWidget(QLabel("Hướng phản xạ:"))
         cfg_layout.addWidget(self.cbo_direction)
         cfg_layout.addWidget(QLabel("Thời gian giới hạn:"))
         cfg_layout.addWidget(self.cbo_timer)
-        cfg_layout.addWidget(btn_start_new)
+        cfg_layout.addWidget(self.btn_start_new)
 
         layout.addWidget(config_box)
+
+        # Nút Bắt Đầu / Kết Thúc Phiên Luyện Tập
+        session_box = QHBoxLayout()
+        self.btn_start_stop = QPushButton("▶️  Bắt Đầu Luyện Tập")
+        self.btn_start_stop.setStyleSheet(
+            "background-color: #2e7d32; color: white; font-weight: bold; font-size: 15px; padding: 10px 20px;"
+        )
+        self.btn_start_stop.clicked.connect(self._toggle_session)
+        session_box.addStretch()
+        session_box.addWidget(self.btn_start_stop)
+        session_box.addStretch()
+        layout.addLayout(session_box)
 
         # Khung Đề Bái & Đếm Ngược Timer
         prompt_box = QGroupBox("⚡ Đề Bài Phản Xạ (Prompt)")
@@ -97,34 +111,79 @@ class ReflexModeWidget(QWidget):
         self.txt_answer.setPlaceholderText("Gõ phản xạ của bạn ở đây và nhấn Enter...")
         self.txt_answer.setStyleSheet("font-size: 16px; padding: 8px;")
         self.txt_answer.returnPressed.connect(self._handle_submit)
+        self.txt_answer.setEnabled(False)
 
         self.btn_submit = QPushButton("🚀 Đánh Giá (Enter)")
         self.btn_submit.setStyleSheet("background-color: #2e7d32; color: white; font-weight: bold; padding: 8px 16px;")
         self.btn_submit.clicked.connect(self._handle_submit)
+        self.btn_submit.setEnabled(False)
 
         a_layout.addWidget(self.txt_answer)
         a_layout.addWidget(self.btn_submit)
 
         layout.addWidget(answer_box)
 
-        # Khung Phân Tích Đánh Giá Bằng AI
-        ai_box = QGroupBox("🤖 Phân Tích & Nhận Xét Từ Gemini AI")
+        # Khung Kết Quả Chấm Điểm
+        ai_box = QGroupBox("📊 Kết Quả Phản Xạ")
         ai_layout = QVBoxLayout(ai_box)
 
         self.txt_ai_feedback = QTextBrowser()
-        self.txt_ai_feedback.setHtml("<p style='color:#888;'>Kết quả phân tích ngữ pháp, điểm số và ví dụ thực tế sẽ hiển thị ở đây sau khi bạn gửi câu trả lời...</p>")
+        self.txt_ai_feedback.setHtml("<p style='color:#888;'>Kết quả chấm điểm sẽ hiển thị ở đây sau khi bạn gửi câu trả lời...</p>")
         ai_layout.addWidget(self.txt_ai_feedback)
 
         layout.addWidget(ai_box)
 
     def _on_direction_changed(self, idx):
         self.direction = "jp-to-vi" if idx == 0 else "vi-to-jp"
-        self.load_next_question()
+        if self.is_running:
+            self.load_next_question()
 
     def _on_timer_config_changed(self, idx):
         limits = [5, 10, 15]
         self.time_limit_sec = limits[idx]
+        if self.is_running:
+            self.load_next_question()
+
+    def _toggle_session(self):
+        if self.is_running:
+            self._stop_session()
+        else:
+            self._start_session()
+
+    def _start_session(self):
+        """Bắt đầu phiên luyện tập: mở khóa các control và tải câu hỏi đầu tiên."""
+        self.is_running = True
+        self.btn_start_stop.setText("⏹  Kết Thúc Phiên")
+        self.btn_start_stop.setStyleSheet(
+            "background-color: #c62828; color: white; font-weight: bold; font-size: 15px; padding: 10px 20px;"
+        )
+        self.btn_start_new.setEnabled(True)
+        self.txt_answer.setEnabled(True)
+        self.btn_submit.setEnabled(True)
+        self.cbo_direction.setEnabled(False)
+        self.cbo_timer.setEnabled(False)
         self.load_next_question()
+
+    def _stop_session(self):
+        """Kết thúc phiên luyện tập: dừng timer và khóa lại các control."""
+        self.is_running = False
+        self.timer.stop()
+        self.current_item = None
+
+        self.btn_start_stop.setText("▶️  Bắt Đầu Luyện Tập")
+        self.btn_start_stop.setStyleSheet(
+            "background-color: #2e7d32; color: white; font-weight: bold; font-size: 15px; padding: 10px 20px;"
+        )
+        self.btn_start_new.setEnabled(False)
+        self.txt_answer.setEnabled(False)
+        self.btn_submit.setEnabled(False)
+        self.cbo_direction.setEnabled(True)
+        self.cbo_timer.setEnabled(True)
+
+        self.txt_answer.clear()
+        self.lbl_question.setText("Nhấn '▶️ Bắt Đầu Luyện Tập' để mở câu luyện tập!")
+        self.lbl_hint.setText("")
+        self.progress_timer.setValue(100)
 
     def load_next_question(self):
         items = self.db.get_random_vocabulary(1)
@@ -135,6 +194,10 @@ class ReflexModeWidget(QWidget):
         self.current_item = items[0]
         self.remaining_sec = self.time_limit_sec
         self.start_time = time.time()
+
+        if self.is_running:
+            self.txt_answer.setEnabled(True)
+            self.btn_submit.setEnabled(True)
 
         if self.direction == "jp-to-vi":
             self.lbl_question.setText(self.current_item['japanese'])
@@ -169,30 +232,19 @@ class ReflexModeWidget(QWidget):
         if not self.current_item:
             return
 
+        # Khóa tạm ô nhập/nút gửi trong lúc hiển thị kết quả, tránh gửi trùng
+        self.txt_answer.setEnabled(False)
+        self.btn_submit.setEnabled(False)
+
         user_ans = self.txt_answer.text().strip()
         elapsed_ms = int((time.time() - self.start_time) * 1000)
 
         prompt_q = self.current_item['japanese'] if self.direction == "jp-to-vi" else self.current_item['vietnamese']
         target_expected = self.current_item['vietnamese'] if self.direction == "jp-to-vi" else self.current_item['japanese']
 
-        self.txt_ai_feedback.setHtml("<i>⏳ Gemini AI đang phân tích và chấm điểm phản xạ...</i>")
-
-        # Gọi AIService chấm điểm
-        eval_result = self.ai_service.evaluate_reflex_answer(
-            prompt_question=prompt_q,
-            target_expected=target_expected,
-            user_answer=user_ans,
-            direction=self.direction,
-            notes=self.current_item.get('notes', '')
-        )
-
-        score = eval_result.get('score', 0)
-        is_corr = eval_result.get('isCorrect', False)
-        feedback = eval_result.get('feedback', '')
-        correction = eval_result.get('suggestedCorrection', target_expected)
-        explanation = eval_result.get('explanation', '')
-        example = eval_result.get('naturalExample', '')
-        nuance = eval_result.get('nuanceNote', '')
+        # So sánh trực tiếp với đáp án có sẵn (không gọi AI -> không lag, không cần mạng)
+        score, is_corr = self._local_check(user_ans, target_expected)
+        correction = target_expected
 
         color_code = "#2e7d32" if is_corr else "#c62828"
         status_txt = "ĐẠT PHẢN XẠ 🎯" if is_corr else "CẦN Luyện Thêm ❌"
@@ -201,16 +253,10 @@ class ReflexModeWidget(QWidget):
         <div style='font-family: sans-serif;'>
             <h3 style='color: {color_code}; margin-bottom: 5px;'>Điểm phản xạ: {score}/100 - {status_txt}</h3>
             <p><b>⏱️ Thời gian đáp:</b> {round(elapsed_ms/1000.0, 2)} giây</p>
-            <p><b>💡 Nhận xét:</b> {feedback}</p>
-            <p><b>✨ Đáp án gợi ý chuẩn nhất:</b> <span style='color: #1565c0; font-weight: bold;'>{correction}</span></p>
-            <p><b>🔍 Phân tích ngữ pháp & Lỗi sai:</b> {explanation}</p>
+            <p><b>✍️ Câu trả lời của bạn:</b> {user_ans if user_ans else '<i>(bỏ trống)</i>'}</p>
+            <p><b>✨ Đáp án chuẩn:</b> <span style='color: #1565c0; font-weight: bold;'>{correction}</span></p>
+        </div>
         """
-        if example:
-            html_out += f"<p><b>💬 Ví dụ giao tiếp thực tế:</b> <i>{example}</i></p>"
-        if nuance:
-            html_out += f"<p><b>📌 Sắc thái sử dụng:</b> {nuance}</p>"
-
-        html_out += "</div>"
 
         self.txt_ai_feedback.setHtml(html_out)
 
@@ -222,5 +268,37 @@ class ReflexModeWidget(QWidget):
             correct_ans=correction,
             score=score,
             response_time_ms=elapsed_ms,
-            ai_feedback=explanation
+            ai_feedback=""
         )
+
+        # Tự động chuyển sang câu tiếp theo sau một khoảng nghỉ ngắn
+        if self.is_running:
+            self.current_item = None
+            self.lbl_hint.setText("➡️ Câu tiếp theo sau 1.5 giây...")
+            QTimer.singleShot(1500, self._advance_to_next_question)
+
+    def _advance_to_next_question(self):
+        """Được gọi tự động sau khi hiển thị kết quả, để chuyển sang câu kế tiếp."""
+        if not self.is_running:
+            return
+        self.txt_answer.setEnabled(True)
+        self.btn_submit.setEnabled(True)
+        self.load_next_question()
+
+    @staticmethod
+    def _local_check(user_ans: str, expected: str) -> tuple[int, bool]:
+        """
+        So sánh câu trả lời với đáp án mẫu (không dùng AI).
+        Chuẩn hóa: bỏ khoảng trắng thừa, không phân biệt hoa/thường.
+        Trả về (score, is_correct).
+        """
+        def normalize(s: str) -> str:
+            return " ".join(s.strip().lower().split())
+
+        if not user_ans:
+            return 0, False
+
+        if normalize(user_ans) == normalize(expected):
+            return 100, True
+
+        return 0, False

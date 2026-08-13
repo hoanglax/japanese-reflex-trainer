@@ -248,6 +248,10 @@ class DataManager:
             new_level = 0
             new_mastery = max(0, mastery_score - 20)
 
+        # Giới hạn trần khoảng ôn tập (tối đa 10 năm) để tránh tràn giới hạn ngày tháng
+        MAX_INTERVAL_DAYS = 3650
+        new_interval = min(new_interval, MAX_INTERVAL_DAYS)
+
         next_review_date = datetime.now() + timedelta(days=new_interval)
 
         cursor.execute("""
