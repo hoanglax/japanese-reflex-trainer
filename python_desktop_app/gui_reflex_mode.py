@@ -15,14 +15,19 @@ import re
 import time
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, 
-    QPushButton, QProgressBar, QGroupBox, QTextBrowser, QComboBox, QMessageBox
+    QPushButton, QProgressBar, QGroupBox, QTextBrowser, QComboBox, QMessageBox,
+    QCheckBox, QDoubleSpinBox
 )
 from PySide6.QtCore import Qt, QTimer, Signal
+from PySide6.QtGui import QShortcut, QKeySequence
 from data_manager import DataManager
 from ai_service import AIService
 
 
 class ReflexModeWidget(QWidget):
+    # Phát tín hiệu mỗi khi một câu được chấm điểm xong, để MainWindow refresh status bar
+    answer_scored = Signal()
+
     def __init__(self, data_manager: DataManager, ai_service: AIService, parent=None):
         super().__init__(parent)
         self.db = data_manager
@@ -34,6 +39,9 @@ class ReflexModeWidget(QWidget):
         self.remaining_sec = 10
         self.direction = "jp-to-vi"  # "jp-to-vi" hoặc "vi-to-jp"
         self.is_running = False  # Phiên luyện tập đang chạy hay chưa
+
+        self.auto_advance_enabled = True
+        self.auto_advance_sec = 1.5  # Thời gian chờ trước khi tự chuyển câu (giây)
 
         self.timer = QTimer(self)
         self.timer.setInterval(1000)
@@ -79,6 +87,39 @@ class ReflexModeWidget(QWidget):
         cfg_layout.addWidget(self.btn_start_new)
 
         layout.addWidget(config_box)
+
+        # ---------------------------------------------------------------------
+        # 1b. TÙY CHỌN TỰ ĐỘNG CHUYỂN CÂU
+        # ---------------------------------------------------------------------
+        advance_box = QGroupBox("⏭️  Tự Động Chuyển Câu")
+        adv_layout = QHBoxLayout(advance_box)
+        adv_layout.setSpacing(10)
+
+        self.chk_auto_advance = QCheckBox("Bật tự động chuyển câu sau khi chấm điểm")
+        self.chk_auto_advance.setChecked(True)
+        self.chk_auto_advance.stateChanged.connect(self._on_auto_advance_toggled)
+
+        self.spin_advance_delay = QDoubleSpinBox()
+        self.spin_advance_delay.setRange(0.5, 10.0)
+        self.spin_advance_delay.setSingleStep(0.5)
+        self.spin_advance_delay.setDecimals(1)
+        self.spin_advance_delay.setSuffix(" giây")
+        self.spin_advance_delay.setValue(self.auto_advance_sec)
+        self.spin_advance_delay.valueChanged.connect(self._on_advance_delay_changed)
+
+        self.btn_next_manual = QPushButton("➡️  Câu Tiếp Theo")
+        self.btn_next_manual.setProperty("variant", "info")
+        self.btn_next_manual.clicked.connect(self._manual_advance)
+        self.btn_next_manual.setEnabled(False)
+        self.btn_next_manual.setVisible(False)
+
+        adv_layout.addWidget(self.chk_auto_advance)
+        adv_layout.addWidget(QLabel("Thời gian chờ:"))
+        adv_layout.addWidget(self.spin_advance_delay)
+        adv_layout.addWidget(self.btn_next_manual)
+        adv_layout.addStretch()
+
+        layout.addWidget(advance_box)
 
         # ---------------------------------------------------------------------
         # 2. NÚT BẮT ĐẦU / KẾT THÚC PHIÊN
@@ -161,6 +202,14 @@ class ReflexModeWidget(QWidget):
 
         layout.addWidget(ai_box)
 
+        # ---------------------------------------------------------------------
+        # 6. PHÍM TẮT CHUYỂN CÂU (Space) - chỉ hoạt động khi đang chờ chuyển câu
+        # ---------------------------------------------------------------------
+        self.shortcut_next = QShortcut(QKeySequence(Qt.Key_Space), self)
+        self.shortcut_next.setContext(Qt.WidgetWithChildrenShortcut)
+        self.shortcut_next.activated.connect(self._manual_advance)
+        self.shortcut_next.setEnabled(False)  # Chỉ bật khi có câu đang chờ chuyển
+
     # -------------------------------------------------------------------------
     # ACTION CONTROL & EVENT HANDLERS
     # -------------------------------------------------------------------------
@@ -174,6 +223,27 @@ class ReflexModeWidget(QWidget):
         self.time_limit_sec = limits[idx]
         if self.is_running:
             self.load_next_question()
+
+    def _on_auto_advance_toggled(self, state):
+        self.auto_advance_enabled = bool(state)
+        self.spin_advance_delay.setEnabled(self.auto_advance_enabled)
+        # Nếu đang chờ tự chuyển câu mà người dùng vừa tắt tính năng, hủy lịch và hiện nút thủ công
+        if not self.auto_advance_enabled and self.advance_timer.isActive():
+            self.advance_timer.stop()
+            self._show_manual_advance_button()
+
+    def _on_advance_delay_changed(self, value):
+        self.auto_advance_sec = value
+
+    def _show_manual_advance_button(self):
+        self.btn_next_manual.setVisible(True)
+        self.btn_next_manual.setEnabled(True)
+        self.lbl_hint.setText("➡️ Nhấn 'Câu Tiếp Theo' hoặc phím Space khi bạn sẵn sàng.")
+
+    def _manual_advance(self):
+        self.btn_next_manual.setEnabled(False)
+        self.btn_next_manual.setVisible(False)
+        self._advance_to_next_question()
 
     def _toggle_session(self):
         if self.is_running:
@@ -200,6 +270,9 @@ class ReflexModeWidget(QWidget):
         self.timer.stop()
         self.advance_timer.stop()
         self.current_item = None
+        self.btn_next_manual.setVisible(False)
+        self.btn_next_manual.setEnabled(False)
+        self.shortcut_next.setEnabled(False)
 
         self.btn_start_stop.setText("▶️   Bắt Đầu Luyện Tập")
         self.btn_start_stop.setProperty("variant", "success")
@@ -224,6 +297,9 @@ class ReflexModeWidget(QWidget):
     def load_next_question(self):
         # Hủy mọi lịch tự động chuyển câu còn treo từ trước
         self.advance_timer.stop()
+        self.btn_next_manual.setVisible(False)
+        self.btn_next_manual.setEnabled(False)
+        self.shortcut_next.setEnabled(False)  # Câu mới đã lên, tắt phím tắt cho đến khi trả lời xong
 
         items = self.db.get_random_vocabulary(1)
         if not items:
@@ -331,14 +407,23 @@ class ReflexModeWidget(QWidget):
             ai_feedback=notes
         )
 
-        # Tự động chuyển sang câu tiếp theo sau 1.5 giây
+        # Báo cho MainWindow biết để cập nhật lại "Điểm TB" trên status bar
+        self.answer_scored.emit()
+
         if self.is_running:
             self.current_item = None
-            self.lbl_hint.setText("➡️ Câu tiếp theo sau 1.5 giây...")
-            self.advance_timer.start(1500)
+            self.shortcut_next.setEnabled(True)  # Cho phép nhấn Space để chuyển câu ngay
+            if self.auto_advance_enabled:
+                delay_ms = int(self.auto_advance_sec * 1000)
+                self.lbl_hint.setText(
+                    f"➡️ Câu tiếp theo sau {self.auto_advance_sec:g} giây... (hoặc nhấn Space để chuyển ngay)"
+                )
+                self.advance_timer.start(delay_ms)
+            else:
+                self._show_manual_advance_button()
 
     def _advance_to_next_question(self):
-        """Được gọi tự động sau khi hiển thị kết quả, để chuyển sang câu kế tiếp."""
+        """Được gọi sau khi hiển thị kết quả (tự động hoặc thủ công), để chuyển sang câu kế tiếp."""
         if not self.is_running:
             return
         self.txt_answer.setEnabled(True)

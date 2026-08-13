@@ -113,6 +113,7 @@ class MainWindow(QMainWindow):
 
         # Page 0: Reflex Training Mode
         self.page_reflex = ReflexModeWidget(self.db, self.ai_service)
+        self.page_reflex.answer_scored.connect(self._update_status_bar)
         self.pages_stack.addWidget(self.page_reflex)
 
         # Page 1: Data Manager Table View
