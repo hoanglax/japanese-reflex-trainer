@@ -18,8 +18,9 @@ from PySide6.QtCore import Qt, Signal
 from data_manager import DataManager
 from ai_service import AIService
 
+
 class DataEntryWidget(QWidget):
-    data_changed_signal = Signal() # Tín hiệu phát ra khi dữ liệu kho thay đổi
+    data_changed_signal = Signal()  # Tín hiệu phát ra khi dữ liệu kho thay đổi
 
     def __init__(self, data_manager: DataManager, ai_service: AIService, parent=None):
         super().__init__(parent)
@@ -29,6 +30,7 @@ class DataEntryWidget(QWidget):
 
     def _init_ui(self):
         main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(12, 12, 12, 12)
 
         # Tab Widget cho 3 phương thức nạp dữ liệu
         self.tabs = QTabWidget()
@@ -55,6 +57,7 @@ class DataEntryWidget(QWidget):
 
         form_group = QGroupBox("Thêm Từ vựng / Mẫu câu mới vào Kho Local")
         form_layout = QVBoxLayout(form_group)
+        form_layout.setSpacing(10)
 
         # Hàng 1: Tiếng Nhật & Cách đọc Kana
         row1 = QHBoxLayout()
@@ -83,7 +86,7 @@ class DataEntryWidget(QWidget):
         # Hàng 3: Loại từ & Cấp độ JLPT
         row3 = QHBoxLayout()
         self.cbo_type = QComboBox()
-        self.cbo_type.addItems(["Từ vựng", "Động từ", "Tính từ", "Mẫu ngữ pháp", "Cụm giao tiếp", "Câu phản xạ"])
+        self.cbo_type.addItems(["Từ vựng", "Đại từ", "Hậu tố", "Động từ", "Tính từ", "Mẫu ngữ pháp", "Cụm giao tiếp", "Câu phản xạ"])
         self.cbo_jlpt = QComboBox()
         self.cbo_jlpt.addItems(["N5", "N4", "N3", "N2", "N1", "Khác"])
         row3.addWidget(QLabel("Loại từ/Cấu trúc:"))
@@ -106,13 +109,14 @@ class DataEntryWidget(QWidget):
         self.txt_notes = QLineEdit()
         form_layout.addWidget(self.txt_notes)
 
-        # Nút Lưu
+        # Nút Lưu - Dùng variant="success" từ theme Dark Mode
         self.btn_save_manual = QPushButton("💾 Lưu Vào Kho Dữ Liệu Local")
-        self.btn_save_manual.setStyleSheet("background-color: #2e7d32; color: white; font-weight: bold; padding: 10px;")
+        self.btn_save_manual.setProperty("variant", "success")
         self.btn_save_manual.clicked.connect(self._handle_manual_save)
         form_layout.addWidget(self.btn_save_manual)
 
         layout.addWidget(form_group)
+        layout.addStretch()  # Giữ form nằm trên, không bị giãn bẹt
 
     def _handle_manual_save(self):
         jp = self.txt_jp.text().strip()
@@ -156,21 +160,25 @@ class DataEntryWidget(QWidget):
 
         group = QGroupBox("Nạp hàng loạt dữ liệu từ tập tin máy tính (UTF-8)")
         g_layout = QVBoxLayout(group)
+        g_layout.setSpacing(16)
 
         lbl_desc = QLabel(
-            "Hỗ trợ nạp các file:\n"
+            "Hỗ trợ nạp các định dạng tập tin:\n"
             "• JSON: [ {\"japanese\": \"...\", \"vietnamese\": \"...\", \"type\": \"...\"}, ... ]\n"
             "• CSV: Cột 'japanese', 'vietnamese', 'kana', 'type'\n"
             "• TXT: Mỗi dòng định dạng: Tiếng Nhật | Tiếng Việt | Kana | Loại từ"
         )
+        lbl_desc.setWordWrap(True)
         g_layout.addWidget(lbl_desc)
 
+        # Nút Chọn File - Dùng variant="info" từ theme Dark Mode
         btn_select_file = QPushButton("📁 Chọn File CSV / JSON / TXT Từ Máy Tính")
-        btn_select_file.setStyleSheet("background-color: #0288d1; color: white; font-weight: bold; padding: 12px;")
+        btn_select_file.setProperty("variant", "info")
         btn_select_file.clicked.connect(self._handle_file_import)
         g_layout.addWidget(btn_select_file)
 
         layout.addWidget(group)
+        layout.addStretch()  # Giúp phần Card Import gọn gàng ở phía trên
 
     def _handle_file_import(self):
         file_path, _ = QFileDialog.getOpenFileName(
@@ -194,6 +202,7 @@ class DataEntryWidget(QWidget):
 
         group = QGroupBox("Tự Động Sinh Từ Vựng & Mẫu Câu Phản Xạ Bằng Gemini AI")
         g_layout = QVBoxLayout(group)
+        g_layout.setSpacing(14)
 
         row_input = QHBoxLayout()
         self.txt_topic = QLineEdit()
@@ -208,12 +217,14 @@ class DataEntryWidget(QWidget):
         row_input.addWidget(self.spn_count)
         g_layout.addLayout(row_input)
 
+        # Nút Sinh AI - Dùng variant="primary" từ theme Dark Mode
         self.btn_gen_ai = QPushButton("✨ Yêu Cầu Gemini AI Sinh Dữ Liệu Vấn Đáp")
-        self.btn_gen_ai.setStyleSheet("background-color: #7b1fa2; color: white; font-weight: bold; padding: 10px;")
+        self.btn_gen_ai.setProperty("variant", "primary")
         self.btn_gen_ai.clicked.connect(self._handle_ai_generate)
         g_layout.addWidget(self.btn_gen_ai)
 
         layout.addWidget(group)
+        layout.addStretch()  # Giữ form AI vừa vặn, không bị kéo dãn dọc màn hình
 
     def _handle_ai_generate(self):
         topic = self.txt_topic.text().strip()

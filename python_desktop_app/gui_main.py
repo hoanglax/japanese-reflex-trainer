@@ -46,44 +46,48 @@ class MainWindow(QMainWindow):
         # 1. SIDEBAR NAVIGATION
         # ---------------------------------------------------------------------
         sidebar = QWidget()
-        sidebar.setFixedWidth(240)
-        sidebar.setStyleSheet("background-color: #1e1e2d; color: white;")
+        sidebar.setFixedWidth(250)
+        sidebar.setStyleSheet("background-color: #1b1e2b;")
         sidebar_layout = QVBoxLayout(sidebar)
-        sidebar_layout.setContentsMargins(10, 20, 10, 20)
+        sidebar_layout.setContentsMargins(14, 24, 14, 20)
+        sidebar_layout.setSpacing(6)
 
         # Title / Logo
-        lbl_logo = QLabel("🇯🇵 JP Reflex AI")
-        lbl_logo.setStyleSheet("font-size: 20px; font-weight: bold; color: #4fc3f7; margin-bottom: 20px;")
+        lbl_logo = QLabel("🇯🇵  JP Reflex")
+        lbl_logo.setStyleSheet("font-size: 20px; font-weight: 700; color: #60a5fa; margin-bottom: 24px;")
         sidebar_layout.addWidget(lbl_logo)
 
         # Buttons Menu
-        self.btn_nav_reflex = QPushButton("⚡ Phản Xạ Nhanh")
-        self.btn_nav_data = QPushButton("🗂️ Quản Lý Kho Dữ Liệu")
-        self.btn_nav_entry = QPushButton("➕ Nạp Từ / Sinh AI")
-        self.btn_nav_settings = QPushButton("⚙️ Cài Đặt API Key")
+        self.btn_nav_reflex = QPushButton("⚡   Phản Xạ Nhanh")
+        self.btn_nav_data = QPushButton("🗂️   Quản Lý Kho Dữ Liệu")
+        self.btn_nav_entry = QPushButton("➕   Nạp Từ / Sinh AI")
+        self.btn_nav_settings = QPushButton("⚙️   Cài Đặt API Key")
 
         menu_buttons = [self.btn_nav_reflex, self.btn_nav_data, self.btn_nav_entry, self.btn_nav_settings]
         for btn in menu_buttons:
             btn.setStyleSheet("""
                 QPushButton {
                     text-align: left;
-                    padding: 12px;
+                    padding: 13px 14px;
                     font-size: 14px;
+                    font-weight: 500;
                     border: none;
-                    border-radius: 6px;
-                    color: #d1d5db;
+                    border-radius: 8px;
+                    background-color: transparent;
+                    color: #b8bcc8;
                 }
                 QPushButton:hover {
-                    background-color: #2b2b40;
+                    background-color: #262a3d;
                     color: #ffffff;
                 }
                 QPushButton:checked {
-                    background-color: #0288d1;
+                    background-color: #2563eb;
                     color: #ffffff;
-                    font-weight: bold;
+                    font-weight: 700;
                 }
             """)
             btn.setCheckable(True)
+            btn.setCursor(Qt.PointingHandCursor)
             sidebar_layout.addWidget(btn)
 
         self.btn_nav_reflex.setChecked(True)
@@ -96,8 +100,8 @@ class MainWindow(QMainWindow):
         sidebar_layout.addStretch()
 
         # Version & Credits
-        lbl_version = QLabel("Phiên bản Desktop v1.0\nClean Architecture")
-        lbl_version.setStyleSheet("color: #78909c; font-size: 11px;")
+        lbl_version = QLabel("Phiên bản Desktop v1.0")
+        lbl_version.setStyleSheet("color: #5b6072; font-size: 11px;")
         sidebar_layout.addWidget(lbl_version)
 
         root_layout.addWidget(sidebar)
@@ -149,27 +153,33 @@ class MainWindow(QMainWindow):
     def _create_data_table_view(self) -> QWidget:
         widget = QWidget()
         layout = QVBoxLayout(widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(12)
 
         # Search bar
         search_box = QHBoxLayout()
+        search_box.setSpacing(10)
         self.txt_search = QLineEdit()
         self.txt_search.setPlaceholderText("🔍 Tìm kiếm từ tiếng Nhật, nghĩa tiếng Việt...")
         self.txt_search.textChanged.connect(self._refresh_data_table)
         
-        btn_refresh = QPushButton("🔄 Tải lại Kho")
+        btn_refresh = QPushButton("🔄  Tải lại Kho")
+        btn_refresh.setProperty("variant", "info")
         btn_refresh.clicked.connect(self._refresh_data_table)
 
-        btn_delete_selected = QPushButton("🗑️ Xóa Mục Đã Chọn")
-        btn_delete_selected.setStyleSheet("background-color: #d32f2f; color: white;")
+        btn_delete_selected = QPushButton("🗑️  Xóa Mục Đã Chọn")
+        btn_delete_selected.setProperty("variant", "danger")
         btn_delete_selected.clicked.connect(self._handle_delete_item)
 
-        search_box.addWidget(self.txt_search)
+        search_box.addWidget(self.txt_search, 1)
         search_box.addWidget(btn_refresh)
         search_box.addWidget(btn_delete_selected)
         layout.addLayout(search_box)
 
         # Table
         self.table_vocab = QTableWidget()
+        self.table_vocab.setAlternatingRowColors(True)
+        self.table_vocab.verticalHeader().setVisible(False)
         self.table_vocab.setColumnCount(7)
         self.table_vocab.setHorizontalHeaderLabels(["ID", "Tiếng Nhật", "Kana/Đọc", "Nghĩa Tiếng Việt", "Loại", "JLPT", "Ví dụ mẫu"])
         self.table_vocab.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
@@ -215,29 +225,34 @@ class MainWindow(QMainWindow):
     def _create_settings_view(self) -> QWidget:
         widget = QWidget()
         layout = QVBoxLayout(widget)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(12)
 
-        group = QGroupBox("Cấu Hình Gemini API Key")
+        group = QGroupBox("🔑  Cấu Hình Gemini API Key")
         g_layout = QVBoxLayout(group)
+        g_layout.setSpacing(10)
 
         lbl_info = QLabel(
             "Cấu hình khóa API Google Gemini để bật tính năng:\n"
             "• Chấm điểm phản xạ chính xác, nhận xét lỗi ngữ pháp & phân tích sắc thái\n"
             "• Tự động sinh bài tập/từ vựng theo chủ đề tùy chọn"
         )
+        lbl_info.setStyleSheet("color: #6b7280;")
         g_layout.addWidget(lbl_info)
 
         row_key = QHBoxLayout()
+        row_key.setSpacing(10)
         self.txt_api_key = QLineEdit()
         self.txt_api_key.setEchoMode(QLineEdit.Password)
         if self.ai_service.api_key:
             self.txt_api_key.setText(self.ai_service.api_key)
 
-        btn_save_key = QPushButton("💾 Cập Nhật GEMINI_API_KEY")
-        btn_save_key.setStyleSheet("background-color: #0288d1; color: white; font-weight: bold; padding: 6px 12px;")
+        btn_save_key = QPushButton("💾  Cập Nhật GEMINI_API_KEY")
+        btn_save_key.setProperty("variant", "primary")
         btn_save_key.clicked.connect(self._handle_save_api_key)
 
         row_key.addWidget(QLabel("GEMINI_API_KEY:"))
-        row_key.addWidget(self.txt_api_key)
+        row_key.addWidget(self.txt_api_key, 1)
         row_key.addWidget(btn_save_key)
         g_layout.addLayout(row_key)
 

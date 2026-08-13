@@ -1,0 +1,28 @@
+わたし | Tôi | わたし | Đại từ
+あなた | Bạn | あなた | Đại từ
+あのひと | Người kia | あのひと | Đại từ
+あのかた | Vị kia | あのかた | Đại từ
+さん | Anh | さん | Hậu tố
+ちゃん | Bé | ちゃん | Hậu tố
+じん | Người | じん | Hậu tố
+せんせい | Thầy giáo | せんせい | Danh từ
+きょうし | Giáo viên | きょうし | Danh từ
+がくせい | Học sinh | がくせい | Danh từ
+かいしゃじん | Nhân viên công ty | かいしゃいん | Danh từ
+しゃいん | Nhân viên | しゃいん | Danh từ
+ぎんこういん | Nhân viên ngân hàng | ぎんこういん | Danh từ
+いしゃ | Bác sĩ | いしゃ | Danh từ
+けんきゅうしゃ | Nhà nghiên cứu | けんきゅうしゃ | Danh từ
+だいがく | Đại học | だいがく | Danh từ
+びょういん | Bệnh viện | びょういin | Danh từ
+だれ | Ai | だれ | Đại từ
+さい | Tuổi | さい | Hậu tố
+なんさい | Mấy tuổi | なんさい | Nghi vấn từ
+はい | Vâng | はい | Thán từ
+いいえ | Không | いいえ | Thán từ
+初めまして | Rất hân hạnh | はじめまして | Cụm giao tiếp
+から来ました | Đến từ | からきました | Cụm giao tiếp
+どうぞよろしく | Rất mong giúp đỡ | どうぞよろしく | Cụm giao tiếp
+失礼ですか | Xin lỗi | しつれいですが | Cụm giao tiếp
+お名前は | Tên bạn là gì | おなまえは | Câu phản xạ
+こちらは～さんです | Đây là anh | こちらは～さんです | Mẫu ngữ pháp

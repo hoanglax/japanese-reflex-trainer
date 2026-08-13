@@ -36,14 +36,22 @@ class ReflexModeWidget(QWidget):
         self.timer.setInterval(1000)
         self.timer.timeout.connect(self._on_timer_tick)
 
+        # Timer riêng để tự động chuyển câu sau khi hiện kết quả (có thể hủy được)
+        self.advance_timer = QTimer(self)
+        self.advance_timer.setSingleShot(True)
+        self.advance_timer.timeout.connect(self._advance_to_next_question)
+
         self._init_ui()
 
     def _init_ui(self):
         layout = QVBoxLayout(self)
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(16)
 
         # Thanh Cấu Hình Phản Xạ (Hướng & Thời gian đếm ngược)
-        config_box = QGroupBox("⚙️ Cấu Hình Chế Độ Phản Xạ Nhanh")
+        config_box = QGroupBox("⚙️  Cấu Hình Chế Độ Phản Xạ Nhanh")
         cfg_layout = QHBoxLayout(config_box)
+        cfg_layout.setSpacing(10)
 
         self.cbo_direction = QComboBox()
         self.cbo_direction.addItems(["Tiếng Nhật ➔ Tiếng Việt", "Tiếng Việt ➔ Tiếng Nhật"])
@@ -54,43 +62,48 @@ class ReflexModeWidget(QWidget):
         self.cbo_timer.setCurrentIndex(1)
         self.cbo_timer.currentIndexChanged.connect(self._on_timer_config_changed)
 
-        self.btn_start_new = QPushButton("🎲 Đổi Câu Khác")
-        self.btn_start_new.setStyleSheet("background-color: #00838f; color: white; font-weight: bold; padding: 6px 12px;")
+        self.btn_start_new = QPushButton("🎲  Đổi Câu Khác")
+        self.btn_start_new.setProperty("variant", "info")
         self.btn_start_new.clicked.connect(self.load_next_question)
         self.btn_start_new.setEnabled(False)
 
         cfg_layout.addWidget(QLabel("Hướng phản xạ:"))
-        cfg_layout.addWidget(self.cbo_direction)
+        cfg_layout.addWidget(self.cbo_direction, 1)
         cfg_layout.addWidget(QLabel("Thời gian giới hạn:"))
-        cfg_layout.addWidget(self.cbo_timer)
+        cfg_layout.addWidget(self.cbo_timer, 1)
         cfg_layout.addWidget(self.btn_start_new)
 
         layout.addWidget(config_box)
 
         # Nút Bắt Đầu / Kết Thúc Phiên Luyện Tập
         session_box = QHBoxLayout()
-        self.btn_start_stop = QPushButton("▶️  Bắt Đầu Luyện Tập")
-        self.btn_start_stop.setStyleSheet(
-            "background-color: #2e7d32; color: white; font-weight: bold; font-size: 15px; padding: 10px 20px;"
-        )
+        self.btn_start_stop = QPushButton("▶️   Bắt Đầu Luyện Tập")
+        self.btn_start_stop.setProperty("variant", "success")
+        self.btn_start_stop.setMinimumWidth(240)
+        self.btn_start_stop.setStyleSheet("font-size: 14px; padding: 12px 24px;")
         self.btn_start_stop.clicked.connect(self._toggle_session)
         session_box.addStretch()
         session_box.addWidget(self.btn_start_stop)
         session_box.addStretch()
         layout.addLayout(session_box)
 
-        # Khung Đề Bái & Đếm Ngược Timer
-        prompt_box = QGroupBox("⚡ Đề Bài Phản Xạ (Prompt)")
+        # Khung Đề Bài & Đếm Ngược Timer
+        prompt_box = QGroupBox("⚡  Đề Bài Phản Xạ")
         p_layout = QVBoxLayout(prompt_box)
+        p_layout.setSpacing(10)
 
-        self.lbl_question = QLabel("Nhấn 'Bắt đầu' hoặc nút 'Đổi câu' để mở câu luyện tập!")
+        self.lbl_question = QLabel("Nhấn '▶️ Bắt Đầu Luyện Tập' để mở câu luyện tập!")
         self.lbl_question.setAlignment(Qt.AlignCenter)
-        self.lbl_question.setStyleSheet("font-size: 22px; font-weight: bold; color: #1a237e; padding: 15px;")
+        self.lbl_question.setWordWrap(True)
+        self.lbl_question.setStyleSheet(
+            "font-size: 24px; font-weight: 700; color: #1e293b; padding: 18px; "
+            "background-color: #eef2ff; border-radius: 10px;"
+        )
         p_layout.addWidget(self.lbl_question)
 
         self.lbl_hint = QLabel("")
         self.lbl_hint.setAlignment(Qt.AlignCenter)
-        self.lbl_hint.setStyleSheet("font-size: 13px; color: #666;")
+        self.lbl_hint.setStyleSheet("font-size: 13px; color: #6b7280;")
         p_layout.addWidget(self.lbl_hint)
 
         # Đồng hồ đếm ngược
@@ -104,34 +117,37 @@ class ReflexModeWidget(QWidget):
         layout.addWidget(prompt_box)
 
         # Khung Nhập Câu Trả Lời
-        answer_box = QGroupBox("✍️ Câu Trả Lời Phản Xạ Của Bạn")
+        answer_box = QGroupBox("✍️  Câu Trả Lời Phản Xạ Của Bạn")
         a_layout = QHBoxLayout(answer_box)
+        a_layout.setSpacing(10)
 
         self.txt_answer = QLineEdit()
         self.txt_answer.setPlaceholderText("Gõ phản xạ của bạn ở đây và nhấn Enter...")
-        self.txt_answer.setStyleSheet("font-size: 16px; padding: 8px;")
+        self.txt_answer.setStyleSheet("font-size: 15px; padding: 10px 12px;")
         self.txt_answer.returnPressed.connect(self._handle_submit)
         self.txt_answer.setEnabled(False)
 
-        self.btn_submit = QPushButton("🚀 Đánh Giá (Enter)")
-        self.btn_submit.setStyleSheet("background-color: #2e7d32; color: white; font-weight: bold; padding: 8px 16px;")
+        self.btn_submit = QPushButton("🚀  Đánh Giá")
+        self.btn_submit.setProperty("variant", "success")
         self.btn_submit.clicked.connect(self._handle_submit)
         self.btn_submit.setEnabled(False)
 
-        a_layout.addWidget(self.txt_answer)
+        a_layout.addWidget(self.txt_answer, 1)
         a_layout.addWidget(self.btn_submit)
 
         layout.addWidget(answer_box)
 
         # Khung Kết Quả Chấm Điểm
-        ai_box = QGroupBox("📊 Kết Quả Phản Xạ")
+        ai_box = QGroupBox("📊  Kết Quả Phản Xạ")
         ai_layout = QVBoxLayout(ai_box)
 
         self.txt_ai_feedback = QTextBrowser()
-        self.txt_ai_feedback.setHtml("<p style='color:#888;'>Kết quả chấm điểm sẽ hiển thị ở đây sau khi bạn gửi câu trả lời...</p>")
+        self.txt_ai_feedback.setStyleSheet("border: none; background: transparent;")
+        self.txt_ai_feedback.setHtml("<p style='color:#9ca3af;'>Kết quả chấm điểm sẽ hiển thị ở đây sau khi bạn gửi câu trả lời...</p>")
         ai_layout.addWidget(self.txt_ai_feedback)
 
         layout.addWidget(ai_box)
+
 
     def _on_direction_changed(self, idx):
         self.direction = "jp-to-vi" if idx == 0 else "vi-to-jp"
@@ -153,10 +169,9 @@ class ReflexModeWidget(QWidget):
     def _start_session(self):
         """Bắt đầu phiên luyện tập: mở khóa các control và tải câu hỏi đầu tiên."""
         self.is_running = True
-        self.btn_start_stop.setText("⏹  Kết Thúc Phiên")
-        self.btn_start_stop.setStyleSheet(
-            "background-color: #c62828; color: white; font-weight: bold; font-size: 15px; padding: 10px 20px;"
-        )
+        self.btn_start_stop.setText("⏹   Kết Thúc Phiên")
+        self.btn_start_stop.setProperty("variant", "danger")
+        self._repolish(self.btn_start_stop)
         self.btn_start_new.setEnabled(True)
         self.txt_answer.setEnabled(True)
         self.btn_submit.setEnabled(True)
@@ -168,12 +183,12 @@ class ReflexModeWidget(QWidget):
         """Kết thúc phiên luyện tập: dừng timer và khóa lại các control."""
         self.is_running = False
         self.timer.stop()
+        self.advance_timer.stop()
         self.current_item = None
 
-        self.btn_start_stop.setText("▶️  Bắt Đầu Luyện Tập")
-        self.btn_start_stop.setStyleSheet(
-            "background-color: #2e7d32; color: white; font-weight: bold; font-size: 15px; padding: 10px 20px;"
-        )
+        self.btn_start_stop.setText("▶️   Bắt Đầu Luyện Tập")
+        self.btn_start_stop.setProperty("variant", "success")
+        self._repolish(self.btn_start_stop)
         self.btn_start_new.setEnabled(False)
         self.txt_answer.setEnabled(False)
         self.btn_submit.setEnabled(False)
@@ -185,7 +200,16 @@ class ReflexModeWidget(QWidget):
         self.lbl_hint.setText("")
         self.progress_timer.setValue(100)
 
+    @staticmethod
+    def _repolish(widget):
+        """Buộc Qt áp dụng lại QSS sau khi đổi thuộc tính động (setProperty)."""
+        widget.style().unpolish(widget)
+        widget.style().polish(widget)
+
     def load_next_question(self):
+        # Hủy mọi lịch tự động chuyển câu còn treo từ trước (tránh chuyển câu 2 lần)
+        self.advance_timer.stop()
+
         items = self.db.get_random_vocabulary(1)
         if not items:
             self.lbl_question.setText("Kho từ vựng đang trống. Vui lòng nạp thêm dữ liệu!")
@@ -275,7 +299,7 @@ class ReflexModeWidget(QWidget):
         if self.is_running:
             self.current_item = None
             self.lbl_hint.setText("➡️ Câu tiếp theo sau 1.5 giây...")
-            QTimer.singleShot(1500, self._advance_to_next_question)
+            self.advance_timer.start(1500)
 
     def _advance_to_next_question(self):
         """Được gọi tự động sau khi hiển thị kết quả, để chuyển sang câu kế tiếp."""

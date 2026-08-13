@@ -89,23 +89,12 @@ class DataManager:
                 "japanese": "お疲れ様でした",
                 "kana": "おつかれさまでした",
                 "romaji": "Otsukaresama deshita",
-                "vietnamese": "Anh/Chị đã làm việc vất vả rồi (Lời chào kết thúc công việc)",
+                "vietnamese": "Anh/Chị đã làm việc vất vả rồi",
                 "type": "Cụm giao tiếp",
                 "jlpt": "N4",
                 "example_jp": "今日も一日、お疲れ様でした。",
                 "example_vi": "Cảm ơn anh chị vì một ngày làm việc vất vả.",
                 "notes": "Dùng rất phổ biến ở công ty Nhật khi hết giờ làm."
-            },
-            {
-                "japanese": "すみませんが、ちょっと教えていただけますか",
-                "kana": "すみませんが、ちょっとおしえていただけますか",
-                "romaji": "Sumimasen ga, chotto oshiete itadakemasu ka",
-                "vietnamese": "Xin lỗi, anh/chị có thể hướng dẫn giúp tôi một chút được không?",
-                "type": "Mẫu câu nhờ vả",
-                "jlpt": "N3",
-                "example_jp": "この書類の書き方をちょっと教えていただけますか。",
-                "example_vi": "Bạn có thể hướng dẫn tôi cách viết tờ khai này một chút được không?",
-                "notes": "Lịch sự thích hợp dùng trong văn phòng."
             },
             {
                 "japanese": "確認する",
@@ -128,21 +117,28 @@ class DataManager:
 
     def add_vocabulary(self, item: Dict[str, Any]) -> int:
         """Thêm một mục từ/câu mới vào CSDL."""
+        jp = item.get('japanese', '').strip()
+        vi = item.get('vietnamese', '').strip()
+        
+        # Đảm bảo không insert chuỗi rỗng vào NOT NULL
+        if not jp or not vi:
+            return 0
+
         with self._get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("""
             INSERT INTO vocabulary (japanese, kana, romaji, vietnamese, type, jlpt, example_jp, example_vi, notes)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
-                item.get('japanese', ''),
-                item.get('kana', ''),
-                item.get('romaji', ''),
-                item.get('vietnamese', ''),
-                item.get('type', 'Từ vựng'),
-                item.get('jlpt', 'N3'),
-                item.get('example_jp', ''),
-                item.get('example_vi', ''),
-                item.get('notes', '')
+                jp,
+                item.get('kana', '').strip(),
+                item.get('romaji', '').strip(),
+                vi,
+                item.get('type', 'Từ vựng').strip(),
+                item.get('jlpt', 'N3').strip(),
+                item.get('example_jp', '').strip(),
+                item.get('example_vi', '').strip(),
+                item.get('notes', '').strip()
             ))
             conn.commit()
             return cursor.lastrowid
@@ -188,7 +184,7 @@ class DataManager:
     # -------------------------------------------------------------------------
 
     def record_practice_log(self, vocab_id: int, prompt_q: str, user_ans: str, 
-                             correct_ans: str, score: int, response_time_ms: int, ai_feedback: str):
+                               correct_ans: str, score: int, response_time_ms: int, ai_feedback: str):
         """Lưu kết quả lượt thực hành phản xạ."""
         with self._get_connection() as conn:
             cursor = conn.cursor()
@@ -197,22 +193,13 @@ class DataManager:
             VALUES (?, ?, ?, ?, ?, ?, ?)
             """, (vocab_id, prompt_q, user_ans, correct_ans, score, response_time_ms, ai_feedback))
             
-            # Cập nhật thông số SRS cho từ vựng nếu có
             if vocab_id:
                 self.update_srs_stats(vocab_id, score, conn)
             
             conn.commit()
 
     def update_srs_stats(self, vocab_id: int, score: int, conn=None):
-        """
-        Cập nhật thuật toán Lặp lại Ngắt quãng (SRS / SuperMemo-2 modification).
-        
-        # TODO: [Developer Extension]
-        Developer có thể tùy chỉnh thuật toán Anki/SM-2 tại đây:
-        - Tùy chỉnh hệ số Quên (Forgetting curve) dựa trên thời gian phản xạ (response_time_ms).
-        - Thêm tích hợp đồng bộ với kho thẻ Anki (.apkg).
-        - Tự kết nối module C++ tăng tốc qua CFFI nếu số lượng thẻ > 100,000.
-        """
+        """Cập nhật thuật toán Lặp lại Ngắt quãng (SRS)."""
         should_close = False
         if conn is None:
             conn = self._get_connection()
@@ -226,13 +213,10 @@ class DataManager:
             return
 
         srs_level, ease_factor, interval_days, mastery_score = row
-
-        # Đánh giá điểm chất lượng 0 - 5 theo SuperMemo
         quality = max(0, min(5, int(score / 20)))
 
-        # Cập nhật hệ số Ease Factor (EF)
         new_ef = ease_factor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02))
-        new_ef = max(1.3, new_ef) # Giới hạn tối thiểu EF = 1.3
+        new_ef = max(1.3, new_ef)
 
         if quality >= 3:
             if srs_level == 0:
@@ -248,10 +232,8 @@ class DataManager:
             new_level = 0
             new_mastery = max(0, mastery_score - 20)
 
-        # Giới hạn trần khoảng ôn tập (tối đa 10 năm) để tránh tràn giới hạn ngày tháng
         MAX_INTERVAL_DAYS = 3650
         new_interval = min(new_interval, MAX_INTERVAL_DAYS)
-
         next_review_date = datetime.now() + timedelta(days=new_interval)
 
         cursor.execute("""
@@ -265,7 +247,7 @@ class DataManager:
             conn.close()
 
     # -------------------------------------------------------------------------
-    # FILE IMPORT & EXPORT (CSV, JSON, TXT)
+    # FILE IMPORT & EXPORT (CSV, JSON, TXT) - ĐÃ BẮT BỆNH LỖI 0 MỤC
     # -------------------------------------------------------------------------
 
     def import_from_file(self, file_path: str) -> int:
@@ -277,12 +259,12 @@ class DataManager:
         imported_count = 0
 
         if ext == '.json':
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='utf-8-sig') as f:
                 data = json.load(f)
                 if isinstance(data, list):
                     for item in data:
-                        self.add_vocabulary(item)
-                        imported_count += 1
+                        if self.add_vocabulary(item) > 0:
+                            imported_count += 1
 
         elif ext == '.csv':
             with open(file_path, 'r', encoding='utf-8-sig') as f:
@@ -299,26 +281,39 @@ class DataManager:
                         'example_vi': row.get('example_vi') or row.get('Dịch ví dụ') or '',
                         'notes': row.get('notes') or row.get('Ghi chú') or ''
                     }
-                    if item['japanese'] and item['vietnamese']:
-                        self.add_vocabulary(item)
+                    if self.add_vocabulary(item) > 0:
                         imported_count += 1
 
         elif ext == '.txt':
-            # Định dạng TXT theo dòng: Tiếng Nhật | Tiếng Việt | Loại từ
-            with open(file_path, 'r', encoding='utf-8') as f:
-                for line in f:
+            with open(file_path, 'r', encoding='utf-8-sig') as f:
+                lines = f.readlines()
+                print(f"=== DEBUG: Tìm thấy {len(lines)} dòng trong file ===")
+                for i, line in enumerate(lines):
                     line = line.strip()
-                    if not line or line.startswith('#'): continue
-                    parts = line.split('|')
+                    if not line or line.startswith('#'): 
+                        continue
+                    
+                    parts = [p.strip() for p in line.split('|')]
+                    print(f"Dòng {i+1}: raw='{line}' | parts={parts} | count={len(parts)}")
+                    
                     if len(parts) >= 2:
+                        jp = parts[0]
+                        vi = parts[1]
+                        kana = parts[2] if len(parts) > 2 else jp
+                        item_type = parts[3] if len(parts) > 3 else 'Từ vựng'
+                        notes = parts[4] if len(parts) > 4 else ''
+
                         item = {
-                            'japanese': parts[0].strip(),
-                            'vietnamese': parts[1].strip(),
-                            'kana': parts[2].strip() if len(parts) > 2 else '',
-                            'type': parts[3].strip() if len(parts) > 3 else 'Từ vựng'
+                            'japanese': jp,
+                            'vietnamese': vi,
+                            'kana': kana,
+                            'type': item_type,
+                            'notes': notes
                         }
-                        self.add_vocabulary(item)
-                        imported_count += 1
+                        
+                        row_id = self.add_vocabulary(item)
+                        if row_id > 0:
+                            imported_count += 1
 
         return imported_count
 

@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 from data_manager import DataManager
 from ai_service import AIService
 from gui_main import MainWindow
+from theme import apply_theme
 
 def main():
     # Load môi trường từ .env nếu có
@@ -25,6 +26,7 @@ def main():
     # Khởi tạo QApplication
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
+    apply_theme(app)
 
     # Khởi tạo Data Access Layer & Service Layer
     db_manager = DataManager("japanese_reflex.db")
