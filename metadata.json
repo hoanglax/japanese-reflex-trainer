@@ -1,6 +1,0 @@
-{
-  "name": "Japanese Reflex Trainer",
-  "description": "Desktop Japanese reflex trainer with Gemini AI, Spaced Repetition, Flash Reflex mode, manual entry, file import, and AI vocabulary generator.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
