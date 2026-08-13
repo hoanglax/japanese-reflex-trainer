@@ -1,0 +1,23 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Virtual Environment của Python
+venv/
+.venv/
+
+# Thư viện Node.js
+node_modules/
+dist/
+.next/
+
+# File rác hệ thống & IDE
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store

@@ -1,0 +1,35 @@
+[
+  {
+    "japanese": "確認いたします",
+    "kana": "かくにんいたします",
+    "romaji": "Kaku-nin itashimasu",
+    "vietnamese": "Tôi xin phép kiểm tra lại (Lịch sự khi trao đổi với khách hàng/cấp trên)",
+    "type": "Cụm giao tiếp",
+    "jlpt": "N3",
+    "example_jp": "少々お待ちください。ただちに確認いたします。",
+    "example_vi": "Xin vui lòng đợi một chút. Tôi sẽ kiểm tra lại ngay lập tức.",
+    "notes": "Kenson-go (Khiêm nhường ngữ) trong môi trường doanh nghiệp Nhật."
+  },
+  {
+    "japanese": "ご Lambert 連絡ありがとうございます",
+    "kana": "ごれんらくありがとうございます",
+    "romaji": "Go-renraku arigatou gozaimasu",
+    "vietnamese": "Cảm ơn anh/chị đã liên lạc",
+    "type": "Cụm giao tiếp",
+    "jlpt": "N4",
+    "example_jp": "早速のご連絡ありがとうございます。",
+    "example_vi": "Cảm ơn anh/chị đã liên lạc phản hồi nhanh chóng.",
+    "notes": "Dùng ở đầu email công việc."
+  },
+  {
+    "japanese": "仕様書",
+    "kana": "しようしょ",
+    "romaji": "Shiyousho",
+    "vietnamese": "Tài liệu tả yêu cầu kỹ thuật / Specification",
+    "type": "Từ vựng IT",
+    "jlpt": "N2",
+    "example_jp": "仕様書に従って実装を行ってください。",
+    "example_vi": "Hãy thực hiện lập trình theo đúng tài liệu tả kỹ thuật.",
+    "notes": "Thuật ngữ ngành Công nghệ thông tin."
+  }
+]
