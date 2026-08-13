@@ -1,28 +1,51 @@
-わたし | Tôi | わたし | Đại từ
-あなた | Bạn | あなた | Đại từ
-あのひと | Người kia | あのひと | Đại từ
-あのかた | Vị kia | あのかた | Đại từ
-さん | Anh | さん | Hậu tố
-ちゃん | Bé | ちゃん | Hậu tố
-じん | Người | じん | Hậu tố
-せんせい | Thầy giáo | せんせい | Danh từ
-きょうし | Giáo viên | きょうし | Danh từ
-がくせい | Học sinh | がくせい | Danh từ
-かいしゃじん | Nhân viên công ty | かいしゃいん | Danh từ
-しゃいん | Nhân viên | しゃいん | Danh từ
-ぎんこういん | Nhân viên ngân hàng | ぎんこういん | Danh từ
-いしゃ | Bác sĩ | いしゃ | Danh từ
-けんきゅうしゃ | Nhà nghiên cứu | けんきゅうしゃ | Danh từ
-だいがく | Đại học | だいがく | Danh từ
-びょういん | Bệnh viện | びょういin | Danh từ
-だれ | Ai | だれ | Đại từ
-さい | Tuổi | さい | Hậu tố
-なんさい | Mấy tuổi | なんさい | Nghi vấn từ
-はい | Vâng | はい | Thán từ
-いいえ | Không | いいえ | Thán từ
-初めまして | Rất hân hạnh | はじめまして | Cụm giao tiếp
-から来ました | Đến từ | からきました | Cụm giao tiếp
-どうぞよろしく | Rất mong giúp đỡ | どうぞよろしく | Cụm giao tiếp
-失礼ですか | Xin lỗi | しつれいですが | Cụm giao tiếp
-お名前は | Tên bạn là gì | おなまえは | Câu phản xạ
-こちらは～さんです | Đây là anh | こちらは～さんです | Mẫu ngữ pháp
+わたし | Tôi | わたし | Đại từ | N5 | 私は学生です。 | Tôi là học sinh. | Ngôi thứ nhất | tôi, toi, tớ, to, mình, minh, em, tao, bản thân, ban than
+わたしたち | Chúng tôi / Chúng ta | わたしたち | Đại từ | N5 | | | Ngôi thứ nhất số nhiều | chúng tôi, chúng ta, chung toi, chung ta, chúng tớ, chung to, chúng mình, chung minh, tụi tôi, tui toi
+あなた | Bạn / Anh / Chị | あなた | Đại từ | N5 | あなたは nguyễn さんですか。 | Bạn là anh Nguyễn phải không? | Ngôi thứ hai, hạn chế dùng với người lớn tuổi | bạn, ban, anh, chi, chị, ông, bà, ong, ba, cậu, cau, mày, may
+あのひと | Người kia / Người đó | あのひと | Đại từ | N5 | あの人は誰ですか。 | Người kia là ai? | Dùng chỉ người ở xa (Kanji: あの人) | người kia, người đó, nguoi kia, nguoi do, người ấy, nguoi ay, hắn, han, y, nó, no
+あのかた | Vị kia / Vị đó | あのかた | Đại từ | N5 | あの方はどなたですか。 | Vị kia là ai vậy? | Kính ngữ của あのひと (Kanji: あの方) | vị kia, vị đó, vi kia, vi do, ngài kia, ngai kia, vị ấy, vi ay
+みなさん | Các bạn / Mọi người | みなさん | Danh từ | N5 | 皆さん、おはようございます。 | Chào mọi người. | Dùng để xưng呼 cả tập thể (Kanji: 皆さん) | các bạn, mọi người, cac ban, moi nguoi, mọi người ơi, quý vị, quy vi, bà con, ba con, tất cả mọi người
+さん | Anh / Chị / Ông / Bà | さん | Hậu tố | N5 | | | Gắn sau tên người khác để thể hiện lịch sự | anh, chi, chị, ông, bà, ong, ba, anh/chị, chú, bác, chu, bac
+ちゃん | Bé / Em | ちゃん | Hậu tố | N5 | | | Gắn sau tên trẻ em hoặc bạn nữ thân thiết | bé, em, be, em, bé gái, be gai, nhóc, nhoc
+くん | Cậu / Bé (nam) | くん | Hậu tố | N5 | | | Gắn sau tên nam thiếu niên/bạn bè (Kanji: ~君) | cậu, bé, cau, be, em, chú em, chu em, cu, cậu bé
+じん | Người (quốc tịch) | じん | Hậu tố | N5 | ベトナム人です。 | Là người Việt Nam. | Gắn sau tên nước để chỉ quốc tịch (Kanji: ~人) | người, nguoi, dân, dan, quốc tịch, quoc tich
+せんせい | Thầy / Cô / Bác sĩ | せんせい | Danh từ | N5 | 先生、質問があります。 | Thầy ơi, em có câu hỏi. | Dùng gọi thầy cô, bác sĩ, đại biểu (Kanji: 先生) | thầy, cô, thầy giáo, cô giáo, thay, co, thay giao, co giao, bác sĩ, bac si, tiên sinh, tien sinh
+きょうし | Giáo viên / Giảng viên | きょうし | Danh từ | N5 | 私は日本語の教師です。 | Tôi là giáo viên tiếng Nhật. | Nghề nghiệp giáo viên (dùng giới thiệu bản thân) (Kanji: 教師) | giáo viên, giaovien, giao vien, gv, giảng viên, giang vien, thầy giáo, cô giáo, thay giao, co giao
+がくせい | Học sinh / Sinh viên | がくせい | Danh từ | N5 | 私は大学生です。 | Tôi là sinh viên đại học. | Người đang đi học (Kanji: 学生) | học sinh, sinh viên, hoc sinh, sinh vien, hs, sv, người học, nguoi hoc
+かいしゃいん | Nhân viên công ty | かいしゃいん | Danh từ | N5 | | | Nghề nghiệp nhân viên công ty nói chung (Kanji: 会社員) | nhân viên công ty, nhan vien cong ty, nhân viên, nhan vien, nv công ty, nv cong ty, nvc
+しゃいん | Nhân viên | しゃいん | Danh từ | N5 | IMCの社員です。 | Là nhân viên công ty IMC. | Nhân viên thuộc một công ty cụ thể (Kanji: 社員) | nhân viên, nhan vien, nv, người làm, nguoi lam
+ぎんこういん | Nhân viên ngân hàng | ぎんこういん | Danh từ | N5 | | | Nghề nghiệp làm tại ngân hàng (Kanji: 銀行員) | nhân viên ngân hàng, nhan vien ngan hang, nv ngân hàng, nv ngan hang, làm ngân hàng, lam ngan hang
+いしゃ | Bác sĩ | いしゃ | Danh từ | N5 | 医者になりたいです。 | Tôi muốn trở thành bác sĩ. | Nghề nghiệp bác sĩ (Kanji: 医者) | bác sĩ, bac si, bác sỹ, bac sy, thầy thuốc, thay thuoc, y sĩ, y si
+けんきゅうしゃ | Nhà nghiên cứu | けんきゅうしゃ | Danh từ | N5 | | | Chỉ người làm công tác nghiên cứu (Kanji: 研究者) | nhà nghiên cứu, nha nghien cuu, nghiên cứu viên, nghien cuu vien, người nghiên cứu
+エンジニア | Kỹ sư | エンジニア | Danh từ | N5 | 私はITエンジニアです。 | Tôi là kỹ sư IT. | Từ mượn Katakana chỉ nghề kỹ sư | kỹ sư, ky su, kĩ sư, ki su, engineer, dev, lập trình viên, lap trinh vien
+だいがく | Đại học / Trường đại học | だいがく | Danh từ | N5 | | | Trường đại học (Kanji: 大学) | đại học, dai hoc, trường đại học, truong dai hoc, trường đh, truong dh, đh, dh
+びょういん | Bệnh viện | びょういん | Danh từ | N5 | | | Cơ sở y tế, bệnh viện (Kanji: 病院) | bệnh viện, benh vien, nhà thương, nha thuong, y tế, y te
+でんき | Điện / Đèn điện | でんき | Danh từ | N5 | 電気をつける。 | Bật đèn/điện. | Nguồn điện hoặc thiết bị chiếu sáng (Kanji: 電気) | điện, đèn, đèn điện, dien, den, den dien, ánh sáng, anh sang
+だれ | Ai / Người nào | だれ | Đại từ | N5 | あの人は誰ですか。 | Người kia là ai? | Từ dùng để hỏi người (Lịch sự hơn là どなた) | ai, ai vậy, ai do, ai thế, ai the, người nào, nguoi nao, ai đó, どなた, donata
+さい | Tuổi | さい | Hậu tố | N5 | 20歳です。 | 20 tuổi. | Hậu tố đứng sau số đếm tuổi (Kanji: -歳) | tuổi, tuoi, tuổi rồi, tuoi roi
+なんさい | Mấy tuổi / Bao nhiêu tuổi | なんさい | Nghi vấn từ | N5 | おいくつですか。 | Bạn bao nhiêu tuổi? | Dùng hỏi tuổi (Kanji: 何歳). Lịch sự hơn là おいくつ | mấy tuổi, may tuoi, bao nhiêu tuổi, bao nhieu tuoi, bao nhiêu, bao nhieu, mấy, may, おいくつ, oikutsu
+はい | Vâng / Có / Đúng | はい | Thán từ | N5 | はい、そうです。 | Vâng, đúng rồi. | Trả lời đồng ý, tán thành | vâng, vang, có, co, dạ, da, đúng, dung, đúng rồi, dung roi, uk, um, ừ
+いいえ | Không / Không phải | いいえ | Thán từ | N5 | いいえ、違います。 | Không, không phải. | Trả lời phủ định, bác bỏ | không, khong, không phải, khong phai, ko, khoang, k
+しつれいですが | Xin lỗi cho tôi hỏi | しつれいですが | Cụm giao tiếp | N5 | 失礼ですが、お名前は？ | Xin lỗi, tên bạn là gì? | Dùng mở đầu lịch sự trước khi hỏi thông tin cá nhân (Kanji: 失礼ですが) | xin lỗi, xin loi, xin lỗi cho tôi hỏi, xin loi cho toi hoi, xin lỗi nhé, xin loi nhe
+おなまえは | Tên bạn là gì | おなまえは | Câu phản xạ | N5 | 失礼ですが、お名前は？ | Xin lỗi, tên bạn là gì? | Rút gọn của お名前は何ですか (Kanji: お名前は?) | tên bạn là gì, ten ban la gi, tên là gì, ten la gi, tên gì, ten gi, bạn tên gì, ban ten gi
+はじめまして | Rất hân hạnh được gặp bạn | はじめまして | Cụm giao tiếp | N5 | 初めまして、ホアンです。 | Rất hân hạnh, tôi là Hoàng. | Chào khi lần đầu tiên gặp mặt (Kanji: 初めまして) | rất hân hạnh, rat han hanh, xin chào, xin chao, hân hạnh, han hanh, chào bạn, chao ban, hân hạnh gặp bạn
+どうぞよろしく | Rất mong được giúp đỡ | どうぞよろしく | Cụm giao tiếp | N5 | どうぞよろしくお願いします。 | Rất mong nhận được sự giúp đỡ. | Nói ở cuối câu giới thiệu bản thân (Đầy đủ: どうぞよろしくお願いします) | rất mong được giúp đỡ, rat mong duoc giup do, mong được giúp đỡ, mong duoc giup do, rất mong giúp đỡ, rat mong giup do, giúp đỡ tôi nhé, giup do toi nhe
+こちらはさんです | Đây là anh/chị... | こちらは～さんです | Mẫu ngữ pháp | N5 | こちらはキムさんです。 | Đây là anh Kim. | Cấu trúc giới thiệu người khác cho ai đó | đây là, day la, đây là anh, day la anh, đây là chị, day la chi
+からきました | Đến từ... | からきました | Cụm giao tiếp | N5 | ベトナムから来ました。 | Tôi đến từ Việt Nam. | Giới thiệu xuất thân, quê hương (Kanji: ~から来ました) | đến từ, den tu, tôi đến từ, toi den tu, từ, tu
+アメリカ | Mỹ / Hoa Kỳ | アメリカ | Danh từ | N5 | アメリカから来ました。 | Tôi đến từ Mỹ. | Tên quốc gia (Nước Mỹ / America) | mỹ, my, hoa kỳ, hoa ky, nước mỹ, nuoc my, hoa kì, hoa ki
+イギリス | Anh / Vương quốc Anh | イギリス | Danh từ | N5 | | | Tên quốc gia (Nước Anh / UK) | anh, nước anh, nuoc anh, vương quốc anh, vuong quoc anh
+インド | Ấn Độ | インド | Danh từ | N5 | | | Tên quốc gia (Ấn Độ / India) | ấn độ, an do, ấn, an, nước ấn độ, nuoc an do
+インドネシア | Indonesia | インドネシア | Danh từ | N5 | | | Tên quốc gia (Indonesia) | indonesia, indo, in-đô-nê-xi-a, nước indonesia
+かんこく | Hàn Quốc | かんこく | Danh từ | N5 | | | Tên quốc gia (Kanji: 韓国) | hàn quốc, han quoc, hàn, han, nước hàn quốc, nuoc han quoc, hàn quốc
+タイ | Thái Lan | タイ | Danh từ | N5 | | | Tên quốc gia (Thái Lan / Thailand) | thái lan, thai lan, thái, thai, nước thái lan, nuoc thai lan
+ちゅうごく | Trung Quốc | ちゅうごく | Danh từ | N5 | | | Tên quốc gia (Kanji: 中国) | trung quốc, trung quoc, trung, trung quốc, nước trung quốc, nuoc trung quoc
+ドイツ | Đức | ドイツ | Danh từ | N5 | | | Tên quốc gia (Nước Đức / Germany) | đức, duc, nước đức, nuoc duc
+にほん | Nhật Bản | にほん | Danh từ | N5 | 日本の会社です。 | Là công ty của Nhật Bản. | Tên quốc gia (Kanji: 日本) | nhật bản, nhat ban, nhật, nhat, nước nhật, nuoc nhat, nhật bổn
+フランス | Pháp | フランス | Danh từ | N5 | | | Tên quốc gia (Nước Pháp / France) | pháp, phap, nước pháp, nuoc phap
+ブラジル | Brazil | ブラジル | Danh từ | N5 | | | Tên quốc gia (Nước Brazil) | brazil, bra-zin, nước brazil, nuoc brazil
+さくらだいがく | Đại học Sakura | さくらだいがく | Danh từ | N5 | | | Tên trường đại học giả định trong sách (Kanji: さくら大学) | đại học sakura, dai hoc sakura, trường sakura, truong sakura
+ふじだいがく | Đại học Fuji | ふじだいがく | Danh từ | N5 | | | Tên trường đại học giả định trong sách (Kanji: 富士大学) | đại học fuji, dai hoc fuji, trường fuji, truong fuji
+アイエムシー | Công ty IMC | アイエムシー | Danh từ | N5 | | | Tên công ty giả định trong sách (IMC) | imc, công ty imc, cong ty imc
+パワーでんき | Công ty Điện lực Power | パワーでんき | Danh từ | N5 | | | Tên công ty giả định trong sách (Kanji: パワー電気) | power điện khí, power den khi, điện lực power, dien luc power, power den ki, công ty power
+ブラジルエアー | Hãng hàng không Brazil Air | ブラジルエアー | Danh từ | N5 | | | Tên hãng hàng không giả định trong sách | brazil air, hàng không brazil, hang khong brazil
+エーケーシー | Tổ chức AKC | エーケーシー | Danh từ | N5 | | | Tên tổ chức giả định trong sách (AKC) | akc, tổ chức akc, to chuc akc
+こうべびょういん | Bệnh viện Kobe | こうべびょういん | Danh từ | N5 | | | Tên bệnh viện giả định trong sách (Kanji: 神戸病院) | bệnh viện kobe, benh vien kobe, kobe

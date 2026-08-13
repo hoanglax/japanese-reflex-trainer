@@ -1,0 +1,41 @@
+ここ | Ở đây / Chỗ này | ここ | Đại từ | N5 | ここは教室です。 | Chỗ này là phòng học. | Vị trí gần người nói | ở đây, o day, chỗ này, cho nay, đây, day, tại đây, tai day
+そこ | Ở đó / Chỗ đó | そこ | Đại từ | N5 | そこは事務所です。 | Chỗ đó là văn phòng. | Vị trí gần người nghe | ở đó, o do, chỗ đó, cho do, đó, do, tại đó, tai do
+あそこ | Ở kia / Chỗ kia | あそこ | Đại từ | N5 | あそこは cafeteria です。 | Chỗ kia là nhà ăn. | Vị trí xa cả hai người | ở kia, o kia, chỗ kia, cho kia, kia, tại kia, tai kia
+どこ | Ở đâu / Chỗ nào | どこ | Đại từ | N5 | お手洗いはどこですか。 | Nhà vệ sinh ở đâu vậy? | Từ dùng để hỏi vị trí/địa điểm | ở đâu, o dau, chỗ nào, cho nao, đâu, dau, ở đâu vậy, o dau vay
+こちら | Hướng này / Chỗ này (Lịch sự) | こちら | Đại từ | N5 | こちらへどうぞ。 | Mời đi hướng này. | Cụm chỉ phương hướng/vị trí lịch sự (của ここ) | hướng này, huong nay, phía này, phia nay, chỗ này, cho nay, đây, day
+そちら | Hướng đó / Chỗ đó (Lịch sự) | そちら | Đại từ | N5 | | | Cụm chỉ phương hướng/vị trí lịch sự (của そこ) | hướng đó, huong do, phía đó, phia do, chỗ đó, cho do, đó, do
+あちら | Hướng kia / Chỗ kia (Lịch sự) | あちら | Đại từ | N5 | | | Cụm chỉ phương hướng/vị trí lịch sự (của あそこ) | hướng kia, huong kia, phía kia, phia kia, chỗ kia, cho kia, kia
+どちら | Hướng nào / Chỗ nào (Lịch sự) | どちら | Đại từ | N5 | 会社はどちらですか。 | Công ty của bạn ở đâu/hướng nào? | Từ hỏi phương hướng/vị trí lịch sự (của どこ) | hướng nào, huong nao, phía nào, phia nao, chỗ nào, cho nao, ở đâu, o dau
+きょうしつ | Phòng học / Lớp học | きょうしつ | Danh từ | N5 | 教室に学生がいます。 | Trong phòng học có học sinh. | Không gian học tập (Kanji: 教室) | phòng học, phong hoc, lớp học, lop hoc, lớp, lop
+しょくどう | Nhà ăn / Nhà hàng | しょくどう | Danh từ | N5 | 食堂で昼ごはんを食べます。 | Ăn trưa tại nhà ăn. | Quán ăn, nhà ăn tập thể (Kanji: 食堂) | nhà ăn, nha an, căng tin, cang tin, phòng ăn, phong an, bếp ăn, bep an
+じむしょ | Văn phòng / Phòng làm việc | じむしょ | Danh từ | N5 | 事務所は2階です。 | Văn phòng ở tầng 2. | Nơi làm việc của công ty/cơ quan (Kanji: 事務所) | văn phòng, van phong, phòng làm việc, phong lam viec, trụ sở, tru so
+かいぎしつ | Phòng họp | かいぎしつ | Danh từ | N5 | 会議室で話し合います。 | Thảo luận tại phòng họp. | Phòng chuyên dùng cho cuộc họp (Kanji: 会議室) | phòng họp, phong hop, phòng hội nghị, phong hoi nghi
+うけつけ | Quầy lễ tân / Bàn tiếp tân | うけつけ | Danh từ | N5 | 受付で名前を書きます。 | Viết tên tại quầy lễ tân. | Nơi tiếp đón khách (Kanji: 受付) | lễ tân, le tan, quầy lễ tân, quay le tan, tiếp tân, tiep tan, bàn tiếp tân, ban tiep tan
+ロビー | Hành lang / Sảnh chờ | ロビー | Danh từ | N5 | ロビーで待ちます。 | Chờ ở sảnh. | Khu vực chờ khách (Từ mượn: Lobby) | sảnh, sanh, sảnh chờ, sanh cho, hành lang, hanh lang, lobby
+へや | Căn phòng / Phòng | へや | Danh từ | N5 | ここは私の部屋です。 | Đây là phòng của tôi. | Phòng riêng (Kanji: 部屋) | phòng, phong, căn phòng, can phong, phòng ở, phong o
+トイレ | Nhà vệ sinh / Nhà tắm | トイレ | Danh từ | N5 | トイレはどこですか。 | Nhà vệ sinh ở đâu vậy? | Nhà vệ sinh (Viết tắt từ Toilet; Đồng nghĩa: お手洗い) | nhà vệ sinh, nha ve sinh, wc, toilet, tolet, nhà tắm, nha tam, お手洗い, otearai, phồng vệ sinh
+かいだん | Cầu thang / Cầu thang bộ | かいだん | Danh từ | N5 | 階段を上がります。 | Đi lên cầu thang. | Cầu thang đi bộ (Kanji: 階段) | cầu thang, cau thang, cầu thang bộ, cau thang bo, thang bộ, thang bo
+エレベーター | Thang máy | エレベーター | Danh từ | N5 | エレベーターで5階へ行きます。 | Đi thang máy lên tầng 5. | Thiết bị di chuyển thẳng đứng (Từ mượn: Elevator) | thang máy, thang may
+エスカレーター | Thang cuốn | エスカレーター | Danh từ | N5 | | | Thang di chuyển tự động (Từ mượn: Escalator) | thang cuốn, thang cuon, thang băng, thang bang
+くに | Đất nước / Quốc gia | くに | Danh từ | N5 | お国はどちらですか。 | Đất nước của bạn ở đâu? | Đất nước, quê hương (Lịch sự: お国; Kanji: 国) | đất nước, dat nuoc, quốc gia, quoc gia, nước, nuoc, quê hương, que huong
+かいしゃ | Công ty | かいしゃ | Danh từ | N5 | 会社に行きます。 | Đến công ty. | Nơi làm việc, doanh nghiệp (Kanji: 会社) | công ty, cong ty, cty, cơ quan, co quan, doanh nghiệp, doanh nghiep
+うち | Nhà / Căn nhà | うち | Danh từ | N5 | うちへ帰ります。 | Trở về nhà. | Tổ ấm, ngôi nhà của mình (Đồng nghĩa: 家 - いえ) | nhà, nha, nhà mình, nha minh, gia đình, gia dinh, căn nhà, can nha
+でんわ | Điện thoại | でんわ | Danh từ | N5 | 電話をかけます。 | Gọi điện thoại. | Thiết bị liên lạc (Kanji: 電話) | điện thoại, dien thoai, đt, dt, cái điện thoại, cai dien thoai
+くつ | Giày / Đôi giày | くつ | Danh từ | N5 | これは日本の靴です。 | Đây là giày của Nhật. | Đồ mang ở chân (Kanji: 靴) | giày, giay, đôi giày, doi giay, guốc, guoc
+ネクタイ | Cà vạt / Cà-vạt | ネクタイ | Danh từ | N5 | ネクタイをしめます。 | Thắt cà vạt. | Trang phục cổ áo (Từ mượn: Necktie) | cà vạt, ca vat, cà-vạt, caravat, ca-vat
+ワイン | Rượu vang / Rượu | ワイン | Danh từ | N5 | フランスのワインを飲みます。 | Uống rượu vang Pháp. | Rượu nho (Từ mượn: Wine) | rượu vang, ruou vang, vang, ruou, rượu
+たばこ | Thuốc lá | たばこ | Danh từ | N5 | たばこをすいます。 | Hút thuốc lá. | Thuốc điếu (Kanji: 煙草) | thuốc lá, thuoc la, thuốc, thuoc, điếu thuốc, dieu thuoc
+うりば | Gian hàng / Quầy bán hàng | うりば | Danh từ | N5 | 靴の売り場はどこですか。 | Gian hàng giày ở đâu? | Nơi bày bán một loại mặt hàng cụ thể (Kanji: 売り場) | gian hàng, gian hang, quầy hàng, quay hang, chỗ bán, cho ban, khu bán hàng, khu ban hang, quầy bán, quay ban
+ちか | Tầng hầm / Underground | ちか | Danh từ | N5 | 地下1階にレストランがあります。 | Có nhà hàng ở tầng hầm B1. | Không gian dưới mặt đất (Kanji: 地下) | tầng hầm, tang ham, hầm, ham, dưới đất, duoi dat, phồng hầm
+かい | Tầng / Tầng lầu | かい | Hậu tố | N5 | 事務所は3階です。 | Văn phòng ở tầng 3. | Đơn vị đếm tầng nhà (Kanji: -階; Biến âm: ~がい) | tầng, tang, lầu, lau, tầng lầu, tang lau
+なんがい | Tầng mấy / Mấy tầng | なんさい | Nghi vấn từ | N5 | 食堂は何階ですか。 | Nhà ăn ở tầng mấy? | Từ dùng để hỏi tầng nhà (Kanji: 何階) | tầng mấy, tang may, mấy tầng, may tang, tầng bao nhiêu, tang bao nhieu, lầu mấy, lau may
+えん | Yên (Tiền Nhật) | えん | Hậu tố | N5 | これは100円です。 | Cái này 100 Yên. | Đơn vị tiền tệ của Nhật Bản (Kanji: -円) | yên, yen, đồng yên, dong yen, tiền yên, tien yen
+いくら | Bao nhiêu tiền / Giá bao nhiêu | いくら | Nghi vấn từ | N5 | このネクタイはいくらですか。 | Cà vạt này bao nhiêu tiền? | Từ dùng để hỏi giá cả | bao nhiêu, bao nhieu, bao nhiêu tiền, bao nhieu tien, giá bao nhiêu, gia bao nhieu, bao tiền, bao tien
+ひゃく | Trăm / 100 | ひゃく | Số đếm | N5 | 百円 | 100 Yên | Số đếm hàng trăm (Kanji: 百) | trăm, tram, một trăm, mot tram, 100
+せん | Nghìn / Ngàn / 1000 | せん | Số đếm | N5 | 千円 | 1000 Yên | Số đếm hàng nghìn (Kanji: 千) | nghìn, nghin, ngàn, ngan, một nghìn, mot nghin, một ngàn, mot ngan, 1000
+まん | Mười nghìn / Vạn / 10000 | まん | Số đếm | N5 | 一万円 | 10.000 Yên | Số đếm hàng vạn (Kanji: 万) | vạn, van, mười nghìn, muoi nghin, mười ngàn, muoi ngan, 10000, 1 vạn
+すみません | Xin lỗi / Cho tôi hỏi | すみません | Cụm giao tiếp | N5 | すみません、これはいくらですか。 | Xin lỗi, cái này bao nhiêu tiền? | Câu lịch sự dùng khi bắt chuyện, hỏi đường hoặc xin lỗi | xin lỗi, xin loi, xin lỗi nhé, cho tôi hỏi, cho toi hoi, xin lỗi ạ
+でございます | Là... (Cực kỳ lịch sự) | でございます | Mẫu ngữ pháp | N5 | 1階でございます。 | Là ở tầng 1 ạ. | Kính ngữ lịch sự cao cấp của です (Dùng trong nhà hàng, khách sạn) | là, la, là ạ, la a
+みせてください | Cho tôi xem... | みせてください | Câu phản xạ | N5 | その時計を見せてください。 | Cho tôi xem cái đồng hồ đó. | Mẫu câu nhờ vả khi mua hàng (Kanji: ~を見せてください) | cho tôi xem, cho toi xem, cho xem, cho xem với, xem giúp, xem giup
+じゃ | Vậy thì / Thế thì | じゃ | Thán từ | N5 | じゃ、これをください。 | Vậy thì, cho tôi lấy cái này. | Từ nối giao tiếp dùng khi đưa ra quyết định (Viết tắt của では) | vậy thì, vay thi, thế thì, the thi, vậy, vay, thế, the
+ください | Cho tôi... / Lấy cho tôi... | ください | Câu phản xạ | N5 | これをください。 | Cho tôi lấy cái này. | Mẫu câu dùng khi quyết định mua hàng (Kanji: ~をください) | cho tôi, cho toi, lấy cho tôi, lay cho toi, cho tôi lấy, cho toi lay, cho mình, cho minh

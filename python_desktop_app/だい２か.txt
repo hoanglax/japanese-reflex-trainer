@@ -1,0 +1,29 @@
+これ | Cái này | これ | Đại từ | N5 | これは何ですか。 | Cái này là cái gì? | Vật ở gần người nói | cái này, cai nay, đây, day, cái này là, cai nay la
+それ | Cái đó | それ | Đại từ | N5 | それは辞書です。 | Cái đó là cuốn từ điển. | Vật ở gần người nghe | cái đó, cai do, đó, do, cái đó là, cai do la
+あれ | Cái kia | あれ | Đại từ | N5 | あれは誰のかさですか。 | Cái kia là ô của ai? | Vật ở xa cả hai người | cái kia, cai kia, kia, cái kia là, cai kia la
+この | ~ này | この | Đại từ | N5 | この本は私のです。 | Quyển sách này là của tôi. | Bổ nghĩa cho danh từ ở gần người nói | này, nay, ... này, ... nay
+その | ~ đó | その | Đại từ | N5 | そのカメラはいくらですか。 | Cái máy ảnh đó bao nhiêu tiền? | Bổ nghĩa cho danh từ ở gần người nghe | đó, do, ... đó, ... do
+あの | ~ kia | あの | Đại từ | N5 | あの人は誰ですか。 | Người kia là ai? | Bổ nghĩa cho danh từ ở xa cả hai | kia, ... kia
+ほん | Sách / Quyển sách | ほん | Danh từ | N5 | これは日本語の本です。 | Đây là sách tiếng Nhật. | Vật dụng để đọc (Kanji: 本) | sách, sach, quyển sách, quyen sach, cuốn sách, cuon sach
+じしょ | Từ điển / Cuốn từ điển | じしょ | Danh từ | N5 | 辞書で調べます。 | Tra bằng từ điển. | Vật dụng tra cứu từ ngữ (Kanji: 辞書) | từ điển, tu dien, cuốn từ điển, cuon tu dien, từ điển từ vựng
+ざっし | Tạp chí | ざっし | Danh từ | N5 | これは自動車の雑誌です。 | Đây là tạp chí ô tô. | Tạp chí, báo định kỳ (Kanji: 雑誌) | tạp chí, tap chi, cuốn tạp chí, cuon tap chi
+しんぶん | Báo / Tờ báo | しんぶん | Danh từ | N5 | 毎朝、新聞を読みます。 | Mỗi sáng tôi đều đọc báo. | Báo chí tin tức (Kanji: 新聞) | báo, bao, tờ báo, to bao, nhật báo, nhat bao
+ノート | Vở / Sổ tay | ノート | Danh từ | N5 | ノートに書きます。 | Viết vào vở. | Vở ghi chép (Từ mượn: Note) | vở, vo, tập, tap, cuốn vở, cuon vo, tập học sinh, tap hoc sinh
+てちょう | Sổ tay / Sổ bỏ túi | てちょう | Danh từ | N5 | 手帳に予定を書きます。 | Ghi lịch trình vào sổ tay. | Sổ tay cá nhân nhỏ gọn (Kanji: 手帳) | sổ tay, so tay, cuốn sổ tay, cuon so tay, sổ bỏ túi, so bo tui
+めいし | Danh thiếp / Namecard | めいし | Danh từ | N5 | 名刺を交換します。 | Tráo đổi danh thiếp. | Thẻ ghi thông tin cá nhân/công ty (Kanji: 名刺) | danh thiếp, danh thiep, card, namecard, card visit, name card, thẻ danh thiếp
+カード | Thẻ / Card | カード | Danh từ | N5 | クレジットカードで払います。 | Thanh toán bằng thẻ tín dụng. | Thẻ nhựa các loại (Từ mượn: Card) | thẻ, the, card, cái thẻ, cai the
+テレホンカード | Thẻ điện thoại | テレホンカード | Danh từ | N5 | | | Thẻ dùng cho điện thoại công cộng | thẻ điện thoại, the dien thoai, thẻ đt, the dt, telephon card
+えんぴつ | Bút chì | えんぴつ | Danh từ | N5 | 鉛筆で書きます。 | Viết bằng bút chì. | Đồ dùng viết lách (Kanji: 鉛筆) | bút chì, but chi, cây bút chì, cay but chi, viết chì, viet chi
+ボールペン | Bút bi | ボールペン | Danh từ | N5 | ボールペンで書いてください。 | Hãy viết bằng bút bi. | Bút mực bi (Từ mượn: Ballpoint pen) | bút bi, but bi, cây bút bi, cay but bi, viết bi, viet bi
+シャープペンシル | Bút chì bấm | シャープペンシル | Danh từ | N5 | | | Bút chì kim / chì bấm (Viết tắt: シャーペン) | bút chì bấm, but chi bam, bút chì kim, but chi kim, chì bấm, chi bam, bút bấm, but bam
+かぎ | Chìa khóa / Khóa | かぎ | Danh từ | N5 | 自動車のかぎです。 | Là chìa khóa ô tô. | Vật dùng để mở/khóa cửa (Kanji: 鍵) | chìa khóa, chia khoa, khóa, khoa, chìa khoá, chia khoa, cái chìa khóa
+とけい | Đồng hồ | とけい | Danh từ | N5 | これはスイスの時計です。 | Đây là đồng hồ Thụy Sĩ. | Vật dụng xem thời gian (Kanji: 時計) | đồng hồ, dong ho, cái đồng hồ, cai dong ho
+かさ | Ô / Dù | かさ | Danh từ | N5 | 雨ですから、かさをさします。 | Vì trời mưa nên tôi che ô. | Vật che mưa nắng (Kanji: 傘) | ô, dù, o, du, cái ô, cai o, cái dù, cai du
+かばん | Cặp / Túi xách | かばん | Danh từ | N5 | かばんに本を入れます。 | Cho sách vào cặp. | Balo, cặp tài liệu, túi xách (Kanji: 鞄) | cặp, cap, túi, tui, túi xách, tui xach, balo, ba lô, cặp sách, cap sach
+テープ | Băng / Băng ghi âm | テープ | Danh từ | N5 | | | Băng cassette hoặc cuộn băng | băng, bang, băng cassette, bang cassette, cuộn băng, cuon bang
+テープレコーダー | Máy ghi âm | テープレコーダー | Danh từ | N5 | | | Thiết bị thu phát âm thanh bằng băng | máy ghi âm, may ghi am, máy thu âm, may thu am, đài ghi âm, dai ghi am
+テレビ | Tivi / Ti vi | テレビ | Danh từ | N5 | テレビを見ます。 | Xem tivi. | Truyền hình / Television | tivi, ti vi, tv, máy tivi, may ti vi, truyền hình, truyen hinh
+ラジオ | Đài / Radio | ラジオ | Danh từ | N5 | ラジオを聞きます。 | Nghe đài radio. | Thiết bị thu thanh | đài, dai, radio, máy đài, may dai, đài radio, dai radio
+カメラ | Máy ảnh / Camera | カメラ | Danh từ | N5 | これは日本のカメラです。 | Đây là máy ảnh của Nhật. | Thiết bị chụp hình | máy ảnh, may anh, camera, máy chụp hình, may chup hinh
+コンピューター | Máy tính / Máy vi tính | コンピューター | Danh từ | N5 | コンピューターの会社です。 | Là công ty máy tính. | Máy vi tính / Computer (Tương đương: パソコン) | máy tính, may tinh, máy vi tính, may vi tinh, computer, máy vi tính, máy tính bàn
+じどうしゃ | Ô tô / Xe hơi | じどうしゃ | Danh từ | N5 | これはドイツの自動車です。 | Đây là xe ô tô của Đức. | Phương tiện xe hơi (Kanji: 自動車, Tương đương: 車) | ô tô, o to, xe hơi, xe hoi, oto, xe ô tô, xe o to, ôtô

@@ -1,0 +1,59 @@
+おきます | Thức dậy / Dậy | おきます | Động từ | N5 | 毎朝6時に起きます。 | Mỗi sáng tôi thức dậy lúc 6 giờ. | Động từ nhóm 2 (Kanji: 起きます) | thức dậy, thuc day, dậy, day, thức giấc, thuc giac
+ねます | Đi ngủ / Ngủ | ねます | Động từ | N5 | 毎晩10時に寝ます。 | Mỗi tối tôi đi ngủ lúc 10 giờ. | Động từ nhóm 2 (Kanji: 寝ます) | đi ngủ, di ngu, ngủ, ngu, ngủ đi, ngu di
+はたらきます | Làm việc | はたらきます | Động từ | N5 | 9時から5時まで働きます。 | Tôi làm việc từ 9 giờ đến 5 giờ. | Động từ nhóm 1 (Kanji: 働きます) | làm việc, lam viec, làm, lam, công tác, cong tac
+やすみます | Nghỉ / Nghỉ ngơi | やすみます | Động từ | N5 | 日曜日に休みます。 | Tôi nghỉ vào chủ nhật. | Động từ nhóm 1 (Kanji: 休みます) | nghỉ, nghi, nghỉ ngơi, nghi ngoi, nghỉ phép, nghi phep
+べんきょうします | Học / Học tập | べんきょうします | Động từ | N5 | 毎晩日本語を勉強します。 | Mỗi tối tôi học tiếng Nhật. | Động từ nhóm 3 (Kanji: 勉強します) | học, hoc, học tập, hoc tap, ôn tập, on tap
+おわります | Kết thúc / Xong / Hết | おわります | Động từ | N5 | 5時に終わります。 | Kết thúc lúc 5 giờ. | Động từ nhóm 1 (Kanji: 終わります) | kết thúc, ket thuc, xong, hết, het, xong rồi, xong roi, hoàn thành
+デパート | Bách hóa / Trung tâm thương mại | デパート | Danh từ | N5 | デパートで買います。 | Mua ở bách hóa. | Cửa hàng bách hóa tổng hợp (Từ mượn: Department store) | bách hóa, bach hoa, trung tâm thương mại, trung tam thuong mai, tttm, siêu thị lớn
+ぎんこう | Ngân hàng | ぎんこう | Danh từ | N5 | 銀行は9時から4時までです。 | Ngân hàng mở cửa từ 9 giờ đến 4 giờ. | Cơ sở tài chính (Kanji: 銀行) | ngân hàng, ngan hang, nhà ngân
+ゆうびんきょく | Bưu điện | ゆうびんきょく | Danh từ | N5 | 郵便局へ行きます。 | Đến bưu điện. | Cơ quan bưu chính (Kanji: 郵便局) | bưu điện, buu dien, bưu cục, buu cuc
+としょかん | Thư viện | としょかん | Danh từ | N5 | 図書館で本を借ります。 | Mượn sách ở thư viện. | Nơi lưu trữ sách báo (Kanji: 図書館) | thư viện, thu vien, nhà sách
+びじゅつかん | Bảo tàng mỹ thuật / Viện bảo tàng | びじゅつかん | Danh từ | N5 | 美術館へ行きます。 | Đến bảo tàng mỹ thuật. | Nơi trưng bày nghệ thuật (Kanji: 美術館) | bảo tàng, bao tang, bảo tàng mỹ thuật, bao tang my thuat, viện bảo tàng
+いま | Bây giờ / Hiện tại | いま | Danh từ | N5 | 今、何時ですか。 | Bây giờ là mấy giờ? | Mốc thời gian hiện tại (Kanji: 今) | bây giờ, bay gio, hiện tại, hien tai, giờ, gio
+じ | Giờ | じ | Hậu tố | N5 | 今、7時です。 | Bây giờ là 7 giờ. | Đơn vị đếm giờ (Kanji: -時) | giờ, gio, tiếng, tieng
+ふん | Phút | ふん | Hậu tố | N5 | 7時15分です。 | 7 giờ 15 phút. | Đơn vị đếm phút (Biến âm: ~ぷん; Kanji: -分) | phút, phut
+はん | Rưỡi / Nửa | はん | Hậu tố | N5 | 7時半です。 | 7 giờ rưỡi. | Chỉ 30 phút (Kanji: 半) | rưỡi, ruoi, nửa, nua, 30 phút, 30 phut
+なんじ | Mấy giờ | なんじ | Nghi vấn từ | N5 | 今、何時ですか。 | Bây giờ là mấy giờ? | Từ dùng để hỏi giờ (Kanji: 何時) | mấy giờ, may gio, giờ nào, gio nao, bao nhiêu giờ, bao nhieu gio
+なんぷん | Mấy phút | なんぷん | Nghi vấn từ | N5 | 何分かかりますか。 | Tốn mấy phút? | Từ dùng để hỏi phút (Kanji: 何分) | mấy phút, may phut, bao nhiêu phút, bao nhieu phut
+ごぜん | Buổi sáng / AM | ごぜん | Danh từ | N5 | 午前9時です。 | 9 giờ sáng. | Khoảng thời gian từ 0h - 12h trưa (Kanji: 午前) | buổi sáng, buoi sang, sáng, sang, am, gô-zen
+ごご | Buổi chiều / PM | ごご | Danh từ | N5 | 午後3時です。 | 3 giờ chiều. | Khoảng thời gian từ 12h trưa - 24h đêm (Kanji: 午後) | buổi chiều, buoi chieu, chiều, chieu, pm, gô-gô
+あさ | Sáng / Buổi sáng | あさ | Danh từ | N5 | 朝、新聞を読みます。 | Buổi sáng tôi đọc báo. | Mốc thời gian đầu ngày (Kanji: 朝) | sáng, sang, buổi sáng, buoi sang, ban sáng, ban sang
+ひる | Trưa / Buổi trưa | ひる | Danh từ | N5 | 昼、ご飯を食べます。 | Buổi trưa tôi ăn cơm. | Khoảng giữa ngày (Kanji: 昼) | trưa, trua, buổi trưa, buoi trua, ban trưa, ban trua
+ばん | Tối / Buổi tối | ばん | Danh từ | N5 | 晩、テレビを見ます。 | Buổi tối tôi xem tivi. | Buổi tối / Đêm (Kanji: 晩 / 夜 - よる) | tối, toi, buổi tối, buoi toi, đêm, dem, buổi đêm, buoi dem, ban đêm, ban dem, 夜, yoru
+おととい | Hôm kia | おととい | Danh từ | N5 | おととい、勉強しました。 | Hôm kia tôi đã học. | Ngày trước ngày hôm qua | hôm kia, hom kia, ngày hôm kia, ngay hom kia
+きのう | Hôm qua | きのう | Danh từ | N5 | 昨日、やすみました。 | Hôm qua tôi đã nghỉ. | Ngày trước ngày hôm nay (Kanji: 昨日) | hôm qua, hom qua, ngày hôm qua, ngay hom qua
+きょう | Hôm nay | きょう | Danh từ | N5 | 今日は火曜日です。 | Hôm nay là thứ Ba. | Ngày hiện tại (Kanji: 今日) | hôm nay, hom nay, ngày hôm nay, ngay hom nay
+あした | Ngày mai / Mai | あした | Danh từ | N5 | 明日、行きます。 | Ngày mai tôi sẽ đi. | Ngày sau ngày hôm nay (Kanji: 明日) | ngày mai, ngay mai, mai, mai này
+あさって | Ngày kia | あさって | Danh từ | N5 | あさって、テストがあります。 | Ngày kia có bài kiểm tra. | Ngày sau ngày mai | ngày kia, ngay kia, ngày mốt, ngay mot, mốt
+けさ | Sáng nay | けさ | Danh từ | N5 | 今朝、何を食べましたか。 | Sáng nay bạn đã ăn gì? | Buổi sáng của ngày hôm nay (Kanji: 今朝) | sáng nay, sang nay, ban sáng nay
+こんばん | Tối nay | こんばん | Danh từ | N5 | 今晩、暇ですか。 | Tối nay bạn có rảnh không? | Buổi tối của ngày hôm nay (Kanji: 今晩) | tối nay, toi nay, đêm nay, dem nay
+やすみ | Ngày nghỉ / Sự nghỉ ngơi | やすみ | Danh từ | N5 | 休みは何曜日ですか。 | Ngày nghỉ là thứ mấy? | Ngày được nghỉ học/nghỉ làm (Kanji: 休み) | ngày nghỉ, ngay nghi, nghỉ, nghi, ngày nghỉ lễ, ngay nghi le, kỳ nghỉ, ky nghi
+ひるやすみ | Nghỉ trưa | ひるやすみ | Danh từ | N5 | 昼休みは12時からです。 | Nghỉ trưa từ 12 giờ. | Khoảng thời gian nghỉ trưa (Kanji: 昼休み) | nghỉ trưa, nghi trua, giờ nghỉ trưa, gio nghi trua
+まいあさ | Mỗi sáng / Hàng sáng | まいあさ | Danh từ | N5 | 毎朝6時に起きます。 | Mỗi sáng tôi dậy lúc 6 giờ. | Tần suất lặp lại buổi sáng (Kanji: 毎朝) | mỗi sáng, moi sang, hàng sáng, hang sang, các buổi sáng, sáng nào cũng
+まいばん | Mỗi tối / Hàng tối | まいばん | Danh từ | N5 | 毎晩日本語を勉強します。 | Mỗi tối tôi học tiếng Nhật. | Tần suất lặp lại buổi tối (Kanji: 毎晩) | mỗi tối, moi toi, hàng tối, hang toi, mỗi đêm, moi dem, tối nào cũng
+まいにち | Mỗi ngày / Hàng ngày | まいにち | Danh từ | N5 | 毎日、働きます。 | Mỗi ngày tôi đều làm việc. | Tần suất lặp lại ngày (Kanji: 毎日) | mỗi ngày, moi ngay, hàng ngày, hang ngay, ngày nào cũng
+げつようび | Thứ Hai | げつようび | Danh từ | N5 | 月曜日にテストがあります。 | Thứ Hai có bài kiểm tra. | Ngày thứ Hai trong tuần (Kanji: 月曜日) | thứ hai, thu hai, thứ 2, thu 2, t2
+かようび | Thứ Ba | かようび | Danh từ | N5 | 火曜日は休みです。 | Thứ Ba là ngày nghỉ. | Ngày thứ Ba trong tuần (Kanji: 火曜日) | thứ ba, thu ba, thứ 3, thu 3, t3
+すいようび | Thứ Tư | すいようび | Danh từ | N5 | 水曜日に病院へ行きます。 | Thứ Tư tôi đi bệnh viện. | Ngày thứ Tư trong tuần (Kanji: 水曜日) | thứ tư, thu tu, thứ 4, thu 4, t4
+もくようび | Thứ Năm | もくようび | Danh từ | N5 | 木曜日に会議があります。 | Thứ Năm có cuộc họp. | Ngày thứ Năm trong tuần (Kanji: 木曜日) | thứ năm, thu nam, thứ 5, thu 5, t5
+きんようび | Thứ Sáu | きんようび | Danh từ | N5 | 金曜日の夜、映画を見ます。 | Tối thứ Sáu tôi xem phim. | Ngày thứ Sáu trong tuần (Kanji: 金曜日) | thứ sáu, thu sau, thứ 6, thu 6, t6
+どようび | Thứ Bảy | どようび | Danh từ | N5 | 土曜日は学校へ行きません。 | Thứ Bảy tôi không đến trường. | Ngày thứ Bảy trong tuần (Kanji: 土曜日) | thứ bảy, thu bay, thứ 7, thu 7, t7
+にちようび | Chủ Nhật | にちようび | Danh từ | N5 | 日曜日に友達と遊ぶ。 | Chủ Nhật đi chơi với bạn. | Ngày Chủ Nhật trong tuần (Kanji: 日曜日) | chủ nhật, chu nhat, cn
+なんようび | Thứ mấy | なんようび | Nghi vấn từ | N5 | 今日は何曜日ですか。 | Hôm nay là thứ mấy? | Từ dùng để hỏi thứ trong tuần (Kanji: 何曜日) | thứ mấy, thu may, ngày thứ mấy, ngay thu may
+ばんごう | Số / Số hiệu | ばんごう | Danh từ | N5 | 電話番号は何番ですか。 | Số điện thoại là số mấy? | Số đếm, số định danh (Kanji: 番号) | số, so, số hiệu, so hieu, mã số, ma so
+なんばん | Số mấy / Số bao nhiêu | なんばん | Nghi vấn từ | N5 | 部屋は何番ですか。 | Phòng số mấy vậy? | Từ dùng để hỏi số (Kanji: 何番) | số mấy, so may, số bao nhiêu, so bao nhieu
+から | Từ... | から | Trợ từ | N5 | 9時から働きます。 | Làm việc từ 9 giờ. | Điểm bắt đầu thời gian hoặc địa điểm | từ, tu, từ lúc, tu luc
+まで | Đến... | まで | Trợ từ | N5 | 5時まで働きます。 | Làm việc đến 5 giờ. | Điểm kết thúc thời gian hoặc địa điểm | đến, den, đến tận, den tan, cho đến, cho den
+と | Và / Với | と | Trợ từ | N5 | 銀行の休みは土曜日と日曜日です。 | Ngày nghỉ của ngân hàng là thứ Bảy và Chủ Nhật. | Nối các danh từ hoặc chỉ đối tượng đi cùng | và, va, với, voi, cùng với, cung voi
+そちら | Phía bạn / Đơn vị của bạn | そちら | Đại từ | N5 | そちらは何時までですか。 | Bên bạn làm việc đến mấy giờ? | Cách xưng呼 lịch sự với đối tác/người nghe | phía bạn, phia ban, bên bạn, ben ban, bên đấy, ben day, chỗ bạn, cho ban
+たいへんですね | Vất vả quá nhỉ / Cực nhỉ | たいへんですね | Cụm giao tiếp | N5 | 毎日大変ですね。 | Ngày nào cũng vất vả nhỉ. | Câu cảm thông, chia sẻ khó khăn với người khác (Kanji: 大変ですね) | vất vả quá nhỉ, vat va qua nhi, vất vả nhỉ, vat va nhi, vất vả quá, vat va qua, mệt nhỉ, met nhi
+えーと | Để tôi xem / Ùm... | えーと | Thán từ | N5 | えーと、100円です。 | Để xem nào, là 100 Yên. | Từ ngập ngừng khi đang suy nghĩ câu trả lời | để xem, de xem, để xem nào, de xem nao, ừm, um, à
+おねがいします | Nhờ bạn / Làm ơn | おねがいします | Câu phản xạ | N5 | 104番、お願いします。 | Làm ơn cho tôi hỏi số 104. | Mẫu câu dùng khi nhờ vả lịch sự (Kanji: お願いします) | làm ơn, lam on, nhờ bạn, nho ban, xin giúp đỡ, xin giup do
+かしこまりました | Tôi đã hiểu rõ rồi ạ | かしこまりました | Cụm giao tiếp | N5 | はい、かしこまりました。 | Vâng, tôi đã hiểu rõ rồi ạ. | Dùng trong dịch vụ khách hàng (Kính ngữ lịch sự của 分かりました) | tôi đã hiểu, toi da hieu, hiểu rồi ạ, hieu roi a, vâng ạ, vang a, tôi rõ rồi, toi ro roi
+おといあわせのばんごう | Số điện thoại bạn muốn hỏi | おといあわせのばんごう | Cụm giao tiếp | N5 | お問い合わせの番号は... | Số điện thoại bạn cần hỏi là... | Cụm từ dùng trong dịch vụ tổng đài giải đáp (Kanji: お問い合わせの番号) | số điện thoại hỏi, so dien thoai hoi, số cần hỏi, so can hoi, số tra cứu, so tra cuu
+どうもありがとうございました | Xin cảm ơn rất nhiều | どうもありがとうございました | Cụm giao tiếp | N5 | どうもありがとうございました。 | Xin cảm ơn ông/bà rất nhiều. | Câu cảm ơn lịch sự ở thì quá khứ (Kanji: [どうも]ありがとうございました) | xin cảm ơn rất nhiều, xin cam on rat nhieu, cảm ơn rất nhiều, cam on rat nhieu, cảm ơn nhiều, cam on nhieu
+ニューヨーク | New York | ニューヨーク | Danh từ | N5 | | | Thành phố New York (Mỹ) | new york, newyork, niu ước, niu uoc
+ペキン | Bắc Kinh | ペキン | Danh từ | N5 | | | Thủ đô Bắc Kinh (Trung Quốc; Kanji: 北京) | bắc kinh, bac kinh, peking, beijing
+ロンドン | Luân Đôn / London | ロンドン | Danh từ | N5 | | | Thủ đô London (Anh) | london, luân đôn, luan don
+バンコク | Băng Cốc / Bangkok | バンコク | Danh từ | N5 | | | Thủ đô Bangkok (Thái Lan) | bangkok, băng cốc, bang coc
+ロサンゼルス | Los Angeles | ロサンゼルス | Danh từ | N5 | | | Thành phố Los Angeles (Mỹ) | los angeles, la, l.a

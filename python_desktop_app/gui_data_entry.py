@@ -163,10 +163,11 @@ class DataEntryWidget(QWidget):
         g_layout.setSpacing(16)
 
         lbl_desc = QLabel(
-            "Hỗ trợ nạp các định dạng tập tin:\n"
-            "• JSON: [ {\"japanese\": \"...\", \"vietnamese\": \"...\", \"type\": \"...\"}, ... ]\n"
-            "• CSV: Cột 'japanese', 'vietnamese', 'kana', 'type'\n"
-            "• TXT: Mỗi dòng định dạng: Tiếng Nhật | Tiếng Việt | Kana | Loại từ"
+            "Hỗ trợ nạp các định dạng tập tin (Mã hóa UTF-8):\n"
+            "• JSON: [ {\"japanese\": \"...\", \"vietnamese\": \"...\", \"notes\": \"...\"}, ... ]\n"
+            "• CSV: Cột 'japanese', 'vietnamese', 'kana', 'type', 'jlpt', 'example_jp', 'example_vi', 'notes'\n"
+            "• TXT: Định dạng đầy đủ 8 cột (phân cách bằng dấu |):\n"
+            "  Tiếng Nhật | Tiếng Việt | Kana | Loại từ | JLPT | Ví dụ JP | Ví dụ VI | Giải thích & Ghi chú"
         )
         lbl_desc.setWordWrap(True)
         g_layout.addWidget(lbl_desc)

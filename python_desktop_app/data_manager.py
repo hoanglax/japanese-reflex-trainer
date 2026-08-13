@@ -44,6 +44,7 @@ class DataManager:
                 kana TEXT,
                 romaji TEXT,
                 vietnamese TEXT NOT NULL,
+                allowed_answers TEXT,
                 type TEXT DEFAULT 'Từ vựng',
                 jlpt TEXT DEFAULT 'N3',
                 example_jp TEXT,
@@ -77,40 +78,6 @@ class DataManager:
             """)
             conn.commit()
 
-            # Nếu cơ sở dữ liệu trống, nạp sẵn một số mẫu câu cơ bản
-            cursor.execute("SELECT COUNT(*) FROM vocabulary")
-            if cursor.fetchone()[0] == 0:
-                self._seed_initial_data()
-
-    def _seed_initial_data(self):
-        """Nạp dữ liệu mẫu ban đầu để ứng dụng sẵn sàng luyện tập ngay."""
-        sample_items = [
-            {
-                "japanese": "お疲れ様でした",
-                "kana": "おつかれさまでした",
-                "romaji": "Otsukaresama deshita",
-                "vietnamese": "Anh/Chị đã làm việc vất vả rồi",
-                "type": "Cụm giao tiếp",
-                "jlpt": "N4",
-                "example_jp": "今日も一日、お疲れ様でした。",
-                "example_vi": "Cảm ơn anh chị vì một ngày làm việc vất vả.",
-                "notes": "Dùng rất phổ biến ở công ty Nhật khi hết giờ làm."
-            },
-            {
-                "japanese": "確認する",
-                "kana": "かくにんする",
-                "romaji": "Kakininsuru",
-                "vietnamese": "Xác nhận / Kiểm tra lại",
-                "type": "Động từ",
-                "jlpt": "N3",
-                "example_jp": "スケジュールをもう一度確認します。",
-                "example_vi": "Tôi sẽ xác nhận lại lịch trình một lần nữa.",
-                "notes": "Rất hay gặp trong công việc IT & Kinh doanh."
-            }
-        ]
-        for item in sample_items:
-            self.add_vocabulary(item)
-
     # -------------------------------------------------------------------------
     # BASIC CRUD OPERATIONS
     # -------------------------------------------------------------------------
@@ -124,18 +91,21 @@ class DataManager:
         if not jp or not vi:
             return 0
 
+        allowed = item.get('allowed_answers', '').strip() or vi
+
         with self._get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("""
-            INSERT INTO vocabulary (japanese, kana, romaji, vietnamese, type, jlpt, example_jp, example_vi, notes)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO vocabulary (japanese, kana, romaji, vietnamese, allowed_answers, type, jlpt, example_jp, example_vi, notes)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 jp,
                 item.get('kana', '').strip(),
                 item.get('romaji', '').strip(),
                 vi,
+                allowed,
                 item.get('type', 'Từ vựng').strip(),
-                item.get('jlpt', 'N3').strip(),
+                item.get('jlpt', 'N5').strip(),
                 item.get('example_jp', '').strip(),
                 item.get('example_vi', '').strip(),
                 item.get('notes', '').strip()
@@ -285,30 +255,27 @@ class DataManager:
                         imported_count += 1
 
         elif ext == '.txt':
+            # Dùng utf-8-sig để tự động xóa ký tự BOM ẩn của Windows Notepad
             with open(file_path, 'r', encoding='utf-8-sig') as f:
-                lines = f.readlines()
-                print(f"=== DEBUG: Tìm thấy {len(lines)} dòng trong file ===")
-                for i, line in enumerate(lines):
+                for line in f:
                     line = line.strip()
-                    if not line or line.startswith('#'): 
+                    if not line or line.startswith('#'):
                         continue
                     
                     parts = [p.strip() for p in line.split('|')]
-                    print(f"Dòng {i+1}: raw='{line}' | parts={parts} | count={len(parts)}")
-                    
                     if len(parts) >= 2:
-                        jp = parts[0]
-                        vi = parts[1]
-                        kana = parts[2] if len(parts) > 2 else jp
-                        item_type = parts[3] if len(parts) > 3 else 'Từ vựng'
-                        notes = parts[4] if len(parts) > 4 else ''
-
+                        # Mẫu 8 cột chuẩn đầy đủ:
+                        # 0: JP | 1: VI_Display | 2: Kana | 3: Type | 4: JLPT | 5: Ex_JP | 6: Ex_VI | 7: Notes | 8: Allowed_Answers
                         item = {
-                            'japanese': jp,
-                            'vietnamese': vi,
-                            'kana': kana,
-                            'type': item_type,
-                            'notes': notes
+                            'japanese': parts[0],
+                            'vietnamese': parts[1],
+                            'kana': parts[2] if len(parts) > 2 else '',
+                            'type': parts[3] if len(parts) > 3 and parts[3] else 'Từ vựng',
+                            'jlpt': parts[4] if len(parts) > 4 and parts[4] else 'N5',
+                            'example_jp': parts[5] if len(parts) > 5 else '',
+                            'example_vi': parts[6] if len(parts) > 6 else '',
+                            'notes': parts[7] if len(parts) > 7 else '',  # Cột giải thích / ngữ cảnh dùng
+                            'allowed_answers': parts[8] if len(parts) > 8 else parts[1] # Cột 9: Các đáp án chấp nhận 
                         }
                         
                         row_id = self.add_vocabulary(item)

@@ -1,0 +1,53 @@
+たべます | Ăn | たべます | Động từ | N5 | ごはんを食べます。 | Ăn cơm. | Động từ nhóm 2 (Kanji: 食べます) | ăn, an, ăn uống, an uong, dùng bữa, dung bua
+のみます | Uống | のみます | Động từ | N5 | 水を飲みます。 | Uống nước. | Động từ nhóm 1 (Kanji: 飲みます) | uống, uong, uống nước, uong nuoc, nhậu, nhau
+すいます | Hút [thuốc] | すいます | Động từ | N5 | たばこを吸います。 | Hút thuốc lá. | Động từ nhóm 1 (Kanji: 吸います) | hút, hut, hút thuốc, hut thuoc, hít, hit
+みます | Xem / Nhìn / Ngắm | みます | Động từ | N5 | テレビを見ます。 | Xem tivi. | Động từ nhóm 2 (Kanji: 見ます) | xem, nhìn, ngắm, xem phim, coi, coi phim, nhin, ngam
+ききます | Nghe | ききます | Động từ | N5 | 音楽を聞きます。 | Nghe nhạc. | Động từ nhóm 1 (Kanji: 聞きます) | nghe, nghe nhạc, nghe nhac, lắng nghe, lang nghe
+よみます | Đọc | よみます | Động từ | N5 | 本を読みます。 | Đọc sách. | Động từ nhóm 1 (Kanji: 読みます) | đọc, doc, đọc sách, doc sach
+かきます | Viết / Vẽ | かきます | Động từ | N5 | 手紙を書きます。 | Viết thư. | Động từ nhóm 1 (Kanji: 書きます) | viết, viet, vẽ, ve, viết thư, viet thu
+かいます | Mua | かいます | Động từ | N5 | パンを買います。 | Mua bánh mì. | Động từ nhóm 1 (Kanji: 買います) | mua, sắm, mua sắm, mua sam, mua đồ, mua do
+とります | Chụp [ảnh] | とります | Động từ | N5 | 写真を撮ります。 | Chụp ảnh. | Động từ nhóm 1 (Kanji: 撮ります) | chụp, chup, chụp ảnh, chup anh, chụp hình, chup hinh, quay, quay phim
+します | Làm / Chơi | します | Động từ | N5 | サッカーをします。 | Chơi bóng đá. | Động từ nhóm 3 (Thực hiện hành động / chơi thể thao) | làm, lam, chơi, choi, thực hiện, thuc hien
+あいます | Gặp [bạn] | あいます | Động từ | N5 | 友達に会います。 | Gặp bạn bè. | Động từ nhóm 1 (Đi với trợ từ に; Kanji: 会います) | gặp, gap, gặp mặt, gap mat, gặp bạn, gap ban, hò hẹn, ho hen
+ごはん | Cơm / Bữa ăn | ごはん | Danh từ | N5 | ごはんを食べます。 | Ăn cơm. | Cơm nấu chín hoặc bữa ăn nói chung (Kanji: ご飯) | cơm, com, bữa ăn, bua an, cơm nước, com nuoc
+あさごはん | Bữa sáng / Cơm sáng | あさごはん | Danh từ | N5 | 朝ごはんを食べましたか。 | Bạn đã ăn sáng chưa? | Bữa ăn buổi sáng (Kanji: 朝ごはん) | bữa sáng, buoi sang, cơm sáng, com sang, ăn sáng, an sang, điểm tâm, diem tam
+ひるごはん | Bữa trưa / Cơm trưa | ひるごはん | Danh từ | N5 | 12時に昼ごはんを食べます。 | Ăn trưa lúc 12 giờ. | Bữa ăn buổi trưa (Kanji: 昼ごはん) | bữa trưa, buoi trua, cơm trưa, com trua, ăn trưa, an trua
+ばんごはん | Bữa tối / Cơm tối | ばんごはん | Danh từ | N5 | 晩ごはんを作りましょ う。 | Hãy nấu cơm tối nào. | Bữa ăn buổi tối (Kanji: 晩ごはん) | bữa tối, buoi toi, cơm tối, com toi, ăn tối, an toi, cơm đêm, com dem
+パン | Bánh mì | パン | Danh từ | N5 | 毎朝パンを食べます。 | Mỗi sáng tôi ăn bánh mì. | Từ mượn Katakana (Bánh mì / Bread) | bánh mì, banh mi, bánh mỳ, banh my, bánh, banh
+たまご | Trứng | たまご | Danh từ | N5 | 卵を買いました。 | Tôi đã mua trứng. | Trứng gia cầm (Kanji: 卵) | trứng, trung, quả trứng, qua trung, hột vịt, hot vit, hột gà, hot ga
+にく | Thịt | にく | Danh từ | N5 | 牛肉を食べます。 | Ăn thịt bò. | Thịt động vật (Kanji: 肉) | thịt, thit, miếng thịt, mieng thit
+さかな | Cá | さかな | Danh từ | N5 | 魚が好きです。 | Tôi thích cá. | Cá nói chung (Kanji: 魚) | cá, ca, con cá, con ca
+やさい | Rau | やさい | Danh từ | N5 | 野菜を食べます。 | Ăn rau. | Các loại rau củ (Kanji: 野菜) | rau, rau củ, rau cu, rau xanh
+くだもの | Hoa quả / Trái cây | くだもの | Danh từ | N5 | 果物を買いました。 | Tôi đã mua hoa quả. | Trái cây (Kanji: 果物) | hoa quả, hoa qua, trái cây, trai cay, quả, qua, trái, trai
+みず | Nước / Nước lạnh | みず | Danh từ | N5 | 水を飲みます。 | Uống nước. | Nước lọc / Nước thường (Kanji: 水) | nước, nuoc, nước lọc, nuoc loc, nước lã, nuoc la
+おちゃ | Trà / Trà xanh | おちゃ | Danh từ | N5 | お茶を飲みます。 | Uống trà. | Trà Nhật Bản / Trà xanh (Kanji: お茶) | trà, tra, chè, che, trà xanh, tra xanh, nước trà, nuoc tra
+こうちゃ | Trà hồng / Hồng trà | こうちゃ | Danh từ | N5 | 紅茶にミルクを入れます。 | Cho sữa vào hồng trà. | Trà đen / Hồng trà kiểu Tây (Kanji: 紅茶) | hồng trà, hong tra, trà đen, tra den, trà tây, tra tay
+ぎゅうにゅう | Sữa bò / Sữa | ぎゅうにゅう | Danh từ | N5 | 牛乳を飲みます。 | Uống sữa bò. | Sữa tươi (Kanji: 牛乳; Từ mượn: ミルク) | sữa, sua, sữa bò, sua bo, sữa tươi, sua tuoi, ミルク, miruku
+ジュース | Nước trái cây / Nước hoa quả | ジュース | Danh từ | N5 | オレンジジュースを飲みます。 | Uống nước ép cam. | Nước ép hoa quả / Đồ uống ngọt (Từ mượn: Juice) | nước trái cây, nuoc trai cay, nước hoa quả, nuoc hoa qua, sinh tố, nước ép, nuoc ep, juice
+ビール | Bia | ビール | Danh từ | N5 | ビールを飲みます。 | Uống bia. | Đồ uống có cồn (Từ mượn: Beer) | bia, bia hơi, bia hoi, ly bia, lon bia
+さけ | Rượu / Rượu Sake | さけ | Danh từ | N5 | お酒を飲みます。 | Uống rượu. | Rượu nói chung hoặc rượu gạo Sake của Nhật (Kanji: お酒) | rượu, ruou, rượu sake, ruou sake, chất có cồn, chat co con
+ビデオ | Băng video / Video | ビデオ | Danh từ | N5 | ビデオを見ます。 | Xem video. | Băng đĩa phim, video (Từ mượn: Video) | video, vi-đê-ô, băng video, bang video, đĩa video, dia video
+えいが | Phim / Phim ảnh | えいが | Danh từ | N5 | 映画館で映画を見ます。 | Xem phim ở rạp. | Phim điện ảnh (Kanji: 映画) | phim, phim ảnh, phim anh, bộ phim, bo phim, điện ảnh, dien anh
+CD | Đĩa CD | CD | Danh từ | N5 | CDを聞きます。 | Nghe đĩa CD. | Đĩa âm thanh Compact Disc | cd, đĩa cd, dia cd, đĩa nhạc, dia nhac
+てがみ | Thư / Bức thư | てがみ | Danh từ | N5 | 友達に手紙を書きます。 | Viết thư cho bạn. | Thư từ gửi bưu điện (Kanji: 手紙) | thư, thu, bức thư, buc thu, thư từ, thu tu, lá thư, la thu
+レポート | Báo cáo / Bài tiểu luận | レポート | Danh từ | N5 | レポートを書きます。 | Viết báo cáo. | Bài tập báo cáo, tiểu luận (Từ mượn: Report) | báo cáo, bao cao, bản báo cáo, ban bao cao, bài tiểu luận, bai tieu luan, tiểu luận, tieu luan, report
+しゃしん | Ảnh / Bức ảnh | しゃしん | Danh từ | N5 | 写真を撮ります。 | Chụp ảnh. | Hình ảnh chụp (Kanji: 写真) | ảnh, anh, bức ảnh, buc anh, hình, hinh, tấm ảnh, tam anh, hình ảnh, hinh anh
+みせ | Cửa hàng / Quán | みせ | Danh từ | N5 | あの店で買いました。 | Mua ở cửa hàng kia. | Cửa hàng, tiệm (Kanji: 店) | cửa hàng, cua hang, quán, quan, tiệm, tiem, cửa hiệu, cua hieu, nhà hàng
+レストラン | Nhà hàng / Quán ăn | レストラン | Danh từ | N5 | レストランで食べます。 | Ăn ở nhà hàng. | Quán ăn kiểu Tây (Từ mượn: Restaurant) | nhà hàng, nha hang, quán ăn, quan an, tiệm ăn, tiem an, nhà ăn, nha an
+にわ | Sân / Khu vườn | にわ | Danh từ | N5 | 庭で遊ぶ。 | Chơi ở ngoài sân. | Khoảng sân, mảnh vườn quanh nhà (Kanji: 庭) | sân, san, vườn, vuon, khu vườn, khu vuon, khoảng sân, khoang san
+しゅくだい | Bài tập về nhà | しゅくだい | Danh từ | N5 | 宿題をします。 | Làm bài tập về nhà. | Bài tập được giao (Kanji: 宿題) | bài tập về nhà, bai tap ve nha, bài tập, bai tap, btvn
+テニス | Quần vợt / Tennis | テニス | Danh từ | N5 | テニスをします。 | Chơi tennis. | Môn thể thao quần vợt (Từ mượn: Tennis) | tennis, te-nis, quần vợt, quan vot, đánh tennis, danh tennis
+サッカー | Bóng đá / Soccer | サッカー | Danh từ | N5 | サッカーをします。 | Chơi bóng đá. | Môn thể thao vua (Từ mượn: Soccer) | bóng đá, bong da, đá bóng, da bong, túc cầu, tuc cau, soccer
+おはなみ | Việc ngắm hoa / Lễ hội ngắm hoa | おはなみ | Danh từ | N5 | お花見へ行きます。 | Đi ngắm hoa. | Tục lệ ngắm hoa anh đào mùa xuân (Kanji: お花見) | ngắm hoa, ngam hoa, lễ hội ngắm hoa, le hoi ngam hoa, ngắm hoa anh đào, ngam hoa anh dao, hanami
+なに | Cái gì / Mấy | なに | Nghi vấn từ | N5 | 何をしますか。 | Bạn làm cái gì? | Từ dùng để hỏi vật/việc (Kanji: 何; Đứng trước dòng d, t, n đọc là なん) | cái gì, cai gi, gì, gi, gì vậy, gi vay, gì thế, gi the, cái chi, cai chi
+いっしょに | Cùng nhau / Cùng | いっしょに | Phó từ | N5 | 一緒に行きましょう。 | Cùng đi nào. | Cùng làm gì đó với người khác (Kanji: 一緒に) | cùng nhau, cung nhau, cùng, cung, đi cùng, di cung, cùng làm, cung lam
+ちょっと | Một chút / Một lát | ちょっと | Phó từ | N5 | ちょっと待ってください。 | Hãy chờ một chút. | Khoảng thời gian ngắn hoặc số lượng ít | một chút, mot chut, một tí, mot ti, chút, chut, lát, lat, một lát, mot lat
+いつも | Luôn luôn / Lúc nào cũng | いつも | Phó từ | N5 | いつも7時に起きます。 | Lúc nào tôi cũng dậy lúc 7 giờ. | Mức độ tần suất 100% | luôn luôn, luon luon, luôn, luon, lúc nào cũng, luc nao cung, thường xuyên, thuong xuyen
+ときどき | Thỉnh thoảng / Đôi khi | ときどき | Phó từ | N5 | 時々、映画を見ます。 | Thỉnh thoảng tôi xem phim. | Mức độ tần suất trung bình (Kanji: 時々) | thỉnh thoảng, thinh thoang, đôi khi, doi khi, thi thoảng, thi thoang, thỉnh thoảng lại
+それから | Sau đó / Tiếp theo | それから | Từ nối | N5 | 勉強します。それから寝ます。 | Học bài. Sau đó đi ngủ. | Dùng để nối các hành động theo thứ tự thời gian | sau đó, sau do, tiếp theo, tiep theo, rồi thì, roi thi, rồi, roi
+ええ | Vâng / Ừ | ええ | Thán từ | N5 | ええ、いいですね。 | Vâng, hay đấy nhỉ. | Trả lời đồng ý (Cách nói tự nhiên, thân mật hơn はい) | vâng, vang, ừ, u, dạ, da, ừm, um, đúng thế, dung the
+いいですね | Hay đấy nhỉ / Được đấy | いいですね | Cụm giao tiếp | N5 | ええ、いいですね。 | Vâng, hay đấy nhỉ! | Mẫu câu tán thành, đồng ý lời rủ rê của người khác | hay đấy, hay day, hay đấy nhỉ, hay day nhi, được đấy, duoc day, tốt quá, tot qua, tuyệt đấy, tuyet day
+わかりました | Tôi đã hiểu rồi / Được rồi | わかりました | Cụm giao tiếp | N5 | はい、分かりました。 | Vâng, tôi hiểu rồi. | Thể hiện đã tiếp nhận thông tin/mệnh lệnh (Kanji: 分かりました) | tôi hiểu rồi, toi hieu roi, hiểu rồi, hieu roi, được rồi, duoc roi, rõ rồi, ro roi, đã hiểu, da hieu
+なにですか | Có chuyện gì vậy? / Cái gì thế? | なにですか | Câu phản xạ | N5 | はい、何ですか。 | Vâng, có chuyện gì thế? | Dùng khi đáp lại lời gọi của ai đó (Kanji: 何ですか) | có chuyện gì thế, co chuyen gi the, cái gì thế, cai gi the, có việc gì vậy, co viec gi vay, sao thế, sao the
+じゃまたあした | Hẹn gặp lại ngày mai / Hẹn mai gặp lại | じゃまたあした | Cụm giao tiếp | N5 | じゃ、また明日。 | Vậy, hẹn gặp lại ngày mai nhé. | Câu chào tạm biệt cuối ngày (Kanji: じゃ、また明日) | hẹn gặp lại ngày mai, hen gap lai ngay mai, hẹn mai gặp lại, hen mai gap lai, chào ngày mai, chao ngay mai, mai gặp lại, mai gap lai
+メキシコ | Mexico | メキシコ | Danh từ | N5 | メキシコから来ました。 | Tôi đến từ Mexico. | Tên quốc gia (Nước Mexico) | mexico, mê-hi-cô, me-hi-co, nước mexico, nuoc mexico

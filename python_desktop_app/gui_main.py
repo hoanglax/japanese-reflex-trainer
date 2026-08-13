@@ -5,22 +5,23 @@ Architecture Layer: View / Main Controller Layout
 ===============================================================================
 Chức năng:
 1. Giao diện Desktop hiện đại với Thanh Điều Hướng (Sidebar Navigation).
-2. Tích hợp Quản lý Kho Dữ liệu, Chế độ Phản Xạ Nhanh, Thống kê & Cài đặt API.
+2. Tích hợp Quản lý Kho Dữ liệu (Bảng 9 cột đầy đủ), Chế độ Phản Xạ Nhanh & Cài đặt API.
 3. Thanh trạng thái Status Bar và Xử lý Phím tắt Hệ thống.
 """
 
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QPushButton, 
     QStackedWidget, QLabel, QTableWidget, QTableWidgetItem, QHeaderView,
-    QLineEdit, QStatusBar, QMessageBox, QGroupBox, QHeaderView
+    QLineEdit, QStatusBar, QMessageBox, QGroupBox
 )
-from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QIcon, QFont
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QFont
 
 from data_manager import DataManager
 from ai_service import AIService
 from gui_data_entry import DataEntryWidget
 from gui_reflex_mode import ReflexModeWidget
+
 
 class MainWindow(QMainWindow):
     def __init__(self, data_manager: DataManager, ai_service: AIService):
@@ -29,7 +30,7 @@ class MainWindow(QMainWindow):
         self.ai_service = ai_service
 
         self.setWindowTitle("Japanese Reflex Trainer - Ứng Dụng Rèn Luyện Phản Xạ Tiếng Nhật")
-        self.resize(1100, 720)
+        self.resize(1200, 750)
 
         self._init_ui()
         self._update_status_bar()
@@ -46,15 +47,15 @@ class MainWindow(QMainWindow):
         # 1. SIDEBAR NAVIGATION
         # ---------------------------------------------------------------------
         sidebar = QWidget()
-        sidebar.setFixedWidth(250)
-        sidebar.setStyleSheet("background-color: #1b1e2b;")
+        sidebar.setFixedWidth(240)
+        sidebar.setStyleSheet("background-color: #0b0f19;")
         sidebar_layout = QVBoxLayout(sidebar)
         sidebar_layout.setContentsMargins(14, 24, 14, 20)
         sidebar_layout.setSpacing(6)
 
         # Title / Logo
         lbl_logo = QLabel("🇯🇵  JP Reflex")
-        lbl_logo.setStyleSheet("font-size: 20px; font-weight: 700; color: #60a5fa; margin-bottom: 24px;")
+        lbl_logo.setStyleSheet("font-size: 20px; font-weight: 700; color: #38bdf8; margin-bottom: 24px;")
         sidebar_layout.addWidget(lbl_logo)
 
         # Buttons Menu
@@ -68,20 +69,20 @@ class MainWindow(QMainWindow):
             btn.setStyleSheet("""
                 QPushButton {
                     text-align: left;
-                    padding: 13px 14px;
+                    padding: 12px 14px;
                     font-size: 14px;
                     font-weight: 500;
                     border: none;
                     border-radius: 8px;
                     background-color: transparent;
-                    color: #b8bcc8;
+                    color: #94a3b8;
                 }
                 QPushButton:hover {
-                    background-color: #262a3d;
+                    background-color: #1e293b;
                     color: #ffffff;
                 }
                 QPushButton:checked {
-                    background-color: #2563eb;
+                    background-color: #3b82f6;
                     color: #ffffff;
                     font-weight: 700;
                 }
@@ -99,9 +100,8 @@ class MainWindow(QMainWindow):
 
         sidebar_layout.addStretch()
 
-        # Version & Credits
         lbl_version = QLabel("Phiên bản Desktop v1.0")
-        lbl_version.setStyleSheet("color: #5b6072; font-size: 11px;")
+        lbl_version.setStyleSheet("color: #64748b; font-size: 11px;")
         sidebar_layout.addWidget(lbl_version)
 
         root_layout.addWidget(sidebar)
@@ -119,7 +119,7 @@ class MainWindow(QMainWindow):
         self.page_data_list = self._create_data_table_view()
         self.pages_stack.addWidget(self.page_data_list)
 
-        # Page 2: Data Entry (Manual / File / AI Generator)
+        # Page 2: Data Entry
         self.page_entry = DataEntryWidget(self.db, self.ai_service)
         self.page_entry.data_changed_signal.connect(self._refresh_data_table)
         self.pages_stack.addWidget(self.page_entry)
@@ -139,28 +139,30 @@ class MainWindow(QMainWindow):
     def _switch_page(self, page_index: int):
         self.pages_stack.setCurrentIndex(page_index)
         
-        # Uncheck other menu buttons
         buttons = [self.btn_nav_reflex, self.btn_nav_data, self.btn_nav_entry, self.btn_nav_settings]
         for i, btn in enumerate(buttons):
             btn.setChecked(i == page_index)
 
-        if page_index != 0 and self.page_reflex.is_running:
+        if page_index != 0 and hasattr(self.page_reflex, 'is_running') and self.page_reflex.is_running:
             self.page_reflex._stop_session()
 
         if page_index == 1:
             self._refresh_data_table()
 
+    # -------------------------------------------------------------------------
+    # TAB QUẢN LÝ KHO DỮ LIỆU (CẬP NHẬT 9 CỘT)
+    # -------------------------------------------------------------------------
     def _create_data_table_view(self) -> QWidget:
         widget = QWidget()
         layout = QVBoxLayout(widget)
         layout.setContentsMargins(20, 20, 20, 20)
         layout.setSpacing(12)
 
-        # Search bar
+        # Search bar & Action Buttons
         search_box = QHBoxLayout()
         search_box.setSpacing(10)
         self.txt_search = QLineEdit()
-        self.txt_search.setPlaceholderText("🔍 Tìm kiếm từ tiếng Nhật, nghĩa tiếng Việt...")
+        self.txt_search.setPlaceholderText("🔍 Tìm kiếm từ tiếng Nhật, nghĩa tiếng Việt, ghi chú...")
         self.txt_search.textChanged.connect(self._refresh_data_table)
         
         btn_refresh = QPushButton("🔄  Tải lại Kho")
@@ -176,13 +178,18 @@ class MainWindow(QMainWindow):
         search_box.addWidget(btn_delete_selected)
         layout.addLayout(search_box)
 
-        # Table
+        # Table Vocabulary (Cấu hình 9 Cột)
         self.table_vocab = QTableWidget()
         self.table_vocab.setAlternatingRowColors(True)
         self.table_vocab.verticalHeader().setVisible(False)
-        self.table_vocab.setColumnCount(7)
-        self.table_vocab.setHorizontalHeaderLabels(["ID", "Tiếng Nhật", "Kana/Đọc", "Nghĩa Tiếng Việt", "Loại", "JLPT", "Ví dụ mẫu"])
-        self.table_vocab.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        
+        # Bổ sung đủ 9 cột thông tin CSDL
+        self.table_vocab.setColumnCount(9)
+        self.table_vocab.setHorizontalHeaderLabels([
+            "ID", "Tiếng Nhật", "Kana/Đọc", "Nghĩa Tiếng Việt", "Loại", "JLPT", "Ví dụ JP", "Ghi chú & Giải thích", "Đáp án chấp nhận"
+        ])
+        self.table_vocab.horizontalHeader().setSectionResizeMode(QHeaderView.Interactive)
+        self.table_vocab.horizontalHeader().setStretchLastSection(True)
         self.table_vocab.setSelectionBehavior(QTableWidget.SelectRows)
 
         layout.addWidget(self.table_vocab)
@@ -201,6 +208,8 @@ class MainWindow(QMainWindow):
             self.table_vocab.setItem(row_idx, 4, QTableWidgetItem(item.get('type', '')))
             self.table_vocab.setItem(row_idx, 5, QTableWidgetItem(item.get('jlpt', '')))
             self.table_vocab.setItem(row_idx, 6, QTableWidgetItem(item.get('example_jp', '')))
+            self.table_vocab.setItem(row_idx, 7, QTableWidgetItem(item.get('notes', '')))              # Cột 8: Notes / Giải thích
+            self.table_vocab.setItem(row_idx, 8, QTableWidgetItem(item.get('allowed_answers', '')))   # Cột 9: Đáp án chấp nhận
 
         self._update_status_bar()
 
@@ -222,6 +231,9 @@ class MainWindow(QMainWindow):
             self.db.delete_vocabulary(item_id)
             self._refresh_data_table()
 
+    # -------------------------------------------------------------------------
+    # TAB CÀI ĐẶT API KEY
+    # -------------------------------------------------------------------------
     def _create_settings_view(self) -> QWidget:
         widget = QWidget()
         layout = QVBoxLayout(widget)
@@ -237,7 +249,7 @@ class MainWindow(QMainWindow):
             "• Chấm điểm phản xạ chính xác, nhận xét lỗi ngữ pháp & phân tích sắc thái\n"
             "• Tự động sinh bài tập/từ vựng theo chủ đề tùy chọn"
         )
-        lbl_info.setStyleSheet("color: #6b7280;")
+        lbl_info.setStyleSheet("color: #94a3b8;")
         g_layout.addWidget(lbl_info)
 
         row_key = QHBoxLayout()

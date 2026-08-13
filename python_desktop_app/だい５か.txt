@@ -1,0 +1,53 @@
+まいあさ | Mỗi sáng / Hàng sáng | まいあさ | Danh từ | N5 | 毎朝6時に起きます。 | Mỗi sáng tôi dậy lúc 6 giờ. | Tần suất lặp lại buổi sáng (Kanji: 毎朝) | mỗi sáng, moi sang, hàng sáng, hang sang, các buổi sáng, sáng nào cũng
+まいばん | Mỗi tối / Hàng tối | まいばん | Danh từ | N5 | 毎晩日本語を勉強します。 | Mỗi tối tôi học tiếng Nhật. | Tần suất lặp lại buổi tối (Kanji: 毎晩) | mỗi tối, moi toi, hàng tối, hang toi, mỗi đêm, moi dem, tối nào cũng
+まいにち | Mỗi ngày / Hàng ngày | まいにち | Danh từ | N5 | 毎日、働きます。 | Mỗi ngày tôi đều làm việc. | Tần suất lặp lại ngày (Kanji: 毎日) | mỗi ngày, moi ngay, hàng ngày, hang ngay, ngày nào cũng
+げつようび | Thứ Hai | げつようび | Danh từ | N5 | 月曜日にテストがあります。 | Thứ Hai có bài kiểm tra. | Ngày thứ Hai trong tuần (Kanji: 月曜日) | thứ hai, thu hai, thứ 2, thu 2, t2
+かようび | Thứ Ba | かようび | Danh từ | N5 | 火曜日は休みです。 | Thứ Ba là ngày nghỉ. | Ngày thứ Ba trong tuần (Kanji: 火曜日) | thứ ba, thu ba, thứ 3, thu 3, t3
+すいようび | Thứ Tư | すいようび | Danh từ | N5 | 水曜日に病院へ行きます。 | Thứ Tư tôi đi bệnh viện. | Ngày thứ Tư trong tuần (Kanji: 水曜日) | thứ tư, thu tu, thứ 4, thu 4, t4
+もくようび | Thứ Năm | もくようび | Danh từ | N5 | 木曜日に会議があります。 | Thứ Năm có cuộc họp. | Ngày thứ Năm trong tuần (Kanji: 木曜日) | thứ năm, thu nam, thứ 5, thu 5, t5
+きんようび | Thứ Sáu | きんようび | Danh từ | N5 | 金曜日の夜、映画を見ます。 | Tối thứ Sáu tôi xem phim. | Ngày thứ Sáu trong tuần (Kanji: 金曜日) | thứ sáu, thu sau, thứ 6, thu 6, t6
+どようび | Thứ Bảy | どようび | Danh từ | N5 | 土曜日は学校へ行きません。 | Thứ Bảy tôi không đến trường. | Ngày thứ Bảy trong tuần (Kanji: 土曜日) | thứ bảy, thu bay, thứ 7, thu 7, t7
+にちようび | Chủ Nhật | にちようび | Danh từ | N5 | 日曜日に友達と遊ぶ。 | Chủ Nhật đi chơi với bạn. | Ngày Chủ Nhật trong tuần (Kanji: 日曜日) | chủ nhật, chu nhat, cn
+なんようび | Thứ mấy | なんようび | Nghi vấn từ | N5 | 今日は何曜日ですか。 | Hôm nay là thứ mấy? | Từ dùng để hỏi thứ trong tuần (Kanji: 何曜日) | thứ mấy, thu may, ngày thứ mấy, ngay thu may
+ばんごう | Số / Số hiệu | ばんごう | Danh từ | N5 | 電話番号は何番ですか。 | Số điện thoại là số mấy? | Số đếm, số định danh (Kanji: 番号) | số, so, số hiệu, so hieu, mã số, ma so
+なんばん | Số mấy / Số bao nhiêu | なんばん | Nghi vấn từ | N5 | 部屋は何番ですか。 | Phòng số mấy vậy? | Từ dùng để hỏi số (Kanji: 何番) | số mấy, so may, số bao nhiêu, so bao nhieu
+から | Từ... | から | Trợ từ | N5 | 9時から働きます。 | Làm việc từ 9 giờ. | Điểm bắt đầu thời gian hoặc địa điểm | từ, tu, từ lúc, tu luc
+まで | Đến... | まで | Trợ từ | N5 | 5時まで働きます。 | Làm việc đến 5 giờ. | Điểm kết thúc thời gian hoặc địa điểm | đến, den, đến tận, den tan, cho đến, cho den
+と | Và / Với | と | Trợ từ | N5 | 銀行の休みは土曜日と日曜日です。 | Ngày nghỉ của ngân hàng là thứ Bảy và Chủ Nhật. | Nối các danh từ hoặc chỉ đối tượng đi cùng | và, va, với, voi, cùng với, cung voi
+そちら | Phía bạn / Đơn vị của bạn | そちら | Đại từ | N5 | そちらは何時までですか。 | Bên bạn làm việc đến mấy giờ? | Cách xưng呼 lịch sự với đối tác/người nghe | phía bạn, phia ban, bên bạn, ben ban, bên đấy, ben day, chỗ bạn, cho ban
+たいへんですね | Vất vả quá nhỉ / Cực nhỉ | たいへんですね | Cụm giao tiếp | N5 | 毎日大変ですね。 | Ngày nào cũng vất vả nhỉ. | Câu cảm thông, chia sẻ khó khăn với người khác (Kanji: 大変ですね) | vất vả quá nhỉ, vat va qua nhi, vất vả nhỉ, vat va nhi, vất vả quá, vat va qua, mệt nhỉ, met nhi
+えーと | Để tôi xem / Ùm... | えーと | Thán từ | N5 | えーと、100円です。 | Để xem nào, là 100 Yên. | Từ ngập ngừng khi đang suy nghĩ câu trả lời | để xem, de xem, để xem nào, de xem nao, ừm, um, à
+おねがいします | Nhờ bạn / Làm ơn | おねがいします | Câu phản xạ | N5 | 104番、お願いします。 | Làm ơn cho tôi hỏi số 104. | Mẫu câu dùng khi nhờ vả lịch sự (Kanji: お願いします) | làm ơn, lam on, nhờ bạn, nho ban, xin giúp đỡ, xin giup do
+かしこまりました | Tôi đã hiểu rõ rồi ạ | かしこまりました | Cụm giao tiếp | N5 | はい、かしこまりました。 | Vâng, tôi đã hiểu rõ rồi ạ. | Dùng trong dịch vụ khách hàng (Kính ngữ lịch sự của 分かりました) | tôi đã hiểu, toi da hieu, hiểu rồi ạ, hieu roi a, vâng ạ, vang a, tôi rõ rồi, toi ro roi
+おといあわせのばんごう | Số điện thoại bạn muốn hỏi | おといあわせのばんごう | Cụm giao tiếp | N5 | お問い合わせの番号は... | Số điện thoại bạn cần hỏi là... | Cụm từ dùng trong dịch vụ tổng đài giải đáp (Kanji: お問い合わせの番号) | số điện thoại hỏi, so dien thoai hoi, số cần hỏi, so can hoi, số tra cứu, so tra cuu
+どうもありがとうございました | Xin cảm ơn rất nhiều | どうもありがとうございました | Cụm giao tiếp | N5 | どうもありがとうございました。 | Xin cảm ơn ông/bà rất nhiều. | Câu cảm ơn lịch sự ở thì quá khứ (Kanji: [どうも]ありがとうございました) | xin cảm ơn rất nhiều, xin cam on rat nhieu, cảm ơn rất nhiều, cam on rat nhieu, cảm ơn nhiều, cam on nhieu
+ニューヨーク | New York | ニューヨーク | Danh từ | N5 | | | Thành phố New York (Mỹ) | new york, newyork, niu ước, niu uoc
+ペキン | Bắc Kinh | ペキン | Danh từ | N5 | | | Thủ đô Bắc Kinh (Trung Quốc; Kanji: 北京) | bắc kinh, bac kinh, peking, beijing
+ロンドン | Luân Đôn / London | ロンドン | Danh từ | N5 | | | Thủ đô London (Anh) | london, luân đôn, luan don
+バンコク | Băng Cốc / Bangkok | バンコク | Danh từ | N5 | | | Thủ đô Bangkok (Thái Lan) | bangkok, băng cốc, bang coc
+ロサンゼルス | Los Angeles | ロサンゼルス | Danh từ | N5 | | | Thành phố Los Angeles (Mỹ) | los angeles, la, l.a
+がつ | Tháng | がつ | Hậu tố | N5 | 今月は8月です。 | Tháng này là tháng 8. | Đơn vị đếm tháng trong năm (Kanji: -月) | tháng, thang
+なんがつ | Tháng mấy | なんがつ | Nghi vấn từ | N5 | 誕生日は何月ですか。 | Sinh nhật bạn là tháng mấy? | Từ dùng để hỏi tháng (Kanji: 何月) | tháng mấy, thang may, tháng bao nhiêu, thang bao nhieu
+ついたち | Mồng 1 / Ngày 1 | ついたち | Danh từ | N5 | 4月1日はエイプリルフールです。 | Ngày 1 tháng 4 là ngày Cá tháng Tư. | Ngày đầu tiên của tháng (Kanji: 1日) | mồng 1, mong 1, mùng 1, mung 1, ngày 1, ngay 1, ngày mồng 1, ngay mong 1, 1 ngày, 1 ngay
+ふつか | Ngày mồng 2 / 2 ngày | ふつか | Danh từ | N5 | 2日に旅行へ行きます。 | Ngày mồng 2 tôi đi du lịch. | Ngày thứ 2 trong tháng hoặc khoảng thời gian 2 ngày (Kanji: 2日) | mồng 2, mong 2, mùng 2, mung 2, ngày 2, ngay 2, ngày mồng 2, ngay mong 2, 2 ngày, 2 ngay
+みっか | Ngày mồng 3 / 3 ngày | みっか | Danh từ | N5 | 3日休みます。 | Nghỉ 3 ngày. | Ngày thứ 3 trong tháng hoặc khoảng thời gian 3 ngày (Kanji: 3日) | mồng 3, mong 3, mùng 3, mung 3, ngày 3, ngay 3, ngày mồng 3, ngay mong 3, 3 ngày, 3 ngay
+よっか | Ngày mồng 4 / 4 ngày | よっか | Danh từ | N5 | 4日にテストがあります。 | Ngày mồng 4 có bài kiểm tra. | Ngày thứ 4 trong tháng hoặc khoảng thời gian 4 ngày (Kanji: 4日) | mồng 4, mong 4, mùng 4, mung 4, ngày 4, ngay 4, ngày mồng 4, ngay mong 4, 4 ngày, 4 ngay
+いつか | Ngày mồng 5 / 5 ngày | いつか | Danh từ | N5 | 5日に友達が来ます。 | Ngày mồng 5 bạn tôi đến. | Ngày thứ 5 trong tháng hoặc khoảng thời gian 5 ngày (Kanji: 5日) | mồng 5, mong 5, mùng 5, mung 5, ngày 5, ngay 5, ngày mồng 5, ngay mong 5, 5 ngày, 5 ngay
+むいか | Ngày mồng 6 / 6 ngày | むいか | Danh từ | N5 | | | Ngày thứ 6 trong tháng hoặc khoảng thời gian 6 ngày (Kanji: 6日) | mồng 6, mong 6, mùng 6, mung 6, ngày 6, ngay 6, ngày mồng 6, ngay mong 6, 6 ngày, 6 ngay
+なのか | Ngày mồng 7 / 7 ngày | なのか | Danh từ | N5 | | | Ngày thứ 7 trong tháng hoặc khoảng thời gian 7 ngày (Kanji: 7日) | mồng 7, mong 7, mùng 7, mung 7, ngày 7, ngay 7, ngày mồng 7, ngay mong 7, 7 ngày, 7 ngay
+ようか | Ngày mồng 8 / 8 ngày | ようか | Danh từ | N5 | | | Ngày thứ 8 trong tháng hoặc khoảng thời gian 8 ngày (Kanji: 8日) | mồng 8, mong 8, mùng 8, mung 8, ngày 8, ngay 8, ngày mồng 8, ngay mong 8, 8 ngày, 8 ngay
+ここのか | Ngày mồng 9 / 9 ngày | ここのか | Danh từ | N5 | | | Ngày thứ 9 trong tháng hoặc khoảng thời gian 9 ngày (Kanji: 9日) | mồng 9, mong 9, mùng 9, mung 9, ngày 9, ngay 9, ngày mồng 9, ngay mong 9, 9 ngày, 9 ngay
+とおか | Ngày mồng 10 / 10 ngày | とおか | Danh từ | N5 | | | Ngày thứ 10 trong tháng hoặc khoảng thời gian 10 ngày (Kanji: 10日) | mồng 10, mong 10, mùng 10, mung 10, ngày 10, ngay 10, ngày mồng 10, ngay mong 10, 10 ngày, 10 ngay
+じゅうよっか | Ngày 14 / 14 ngày | じゅうよっか | Danh từ | N5 | | | Ngày 14 trong tháng hoặc khoảng thời gian 14 ngày (Kanji: 14日) | ngày 14, ngay 14, 14 ngày, 14 ngay, ngày mười bốn, ngay muoi bon
+はつか | Ngày 20 / 20 ngày | はつか | Danh từ | N5 | 20日は二十歳です。 | Ngày 20. | Ngày 20 trong tháng hoặc khoảng thời gian 20 ngày (Kanji: 20日) | ngày 20, ngay 20, 20 ngày, 20 ngay, ngày hai mươi, ngay hai muoi
+にじゅうよっか | Ngày 24 / 24 ngày | にじゅうよっか | Danh từ | N5 | | | Ngày 24 trong tháng hoặc khoảng thời gian 24 ngày (Kanji: 24日) | ngày 24, ngay 24, 24 ngày, 24 ngay, ngày hai mươi tư, ngay hai muoi tu
+にち | Ngày | にち | Hậu tố | N5 | 15日に行きます。 | Tôi sẽ đi vào ngày 15. | Đơn vị đếm ngày / mốc ngày trong tháng (Kanji: -日) | ngày, ngay
+なんにち | Ngày mấy / Mấy ngày | なんにち | Nghi vấn từ | N5 | 今日は何日ですか。 | Hôm nay là ngày mấy? | Từ dùng để hỏi ngày trong tháng hoặc số lượng ngày (Kanji: 何日) | ngày mấy, ngay may, ngày bao nhiêu, ngay bao nhieu, mấy ngày, may ngay, bao nhiêu ngày, bao nhieu ngay
+いつ | Bao giờ / Khi nào | いつ | Nghi vấn từ | N5 | いつ日本へ行きますか。 | Khi nào bạn đi Nhật? | Từ dùng để hỏi thời điểm chung | khi nào, khi nao, bao giờ, bao gio, lúc nào, luc nao
+たんじょうび | Sinh nhật | たんじょうび | Danh từ | N5 | 誕生日はいつですか。 | Sinh nhật bạn là khi nào? | Ngày kỷ niệm sinh ra (Kanji: 誕生日) | sinh nhật, sinh nhat, ngày sinh nhật, ngay sinh nhat, ngày sinh, ngay sinh
+ふつう | Tàu thường / Phổ thông | ふつう | Danh từ | N5 | 普通電車に乗ります。 | Đi tàu thường. | Loại tàu dừng ở tất cả các ga (Kanji: 普通) | tàu thường, tau thuong, xe thường, xe thuong, phổ thông, pho thong, thường, thuong
+きゅうこう | Tàu tốc hành | きゅうこう | Danh từ | N5 | 急行で行きます。 | Đi bằng tàu tốc hành. | Loại tàu chạy nhanh, bỏ qua một số ga nhỏ (Kanji: 急行) | tàu tốc hành, tau toc hanh, tốc hành, toc hanh, xe tốc hành, xe toc hanh
+とっきゅう | Tàu tốc hành đặc biệt / Tàu hỏa tốc | とっきゅう | Danh từ | N5 | 特急は速いです。 | Tàu tốc hành đặc biệt rất nhanh. | Loại tàu siêu tốc hành chạy rất nhanh (Kanji: 特急) | tàu tốc hành đặc biệt, tau toc hanh dac biet, đặc biệt, dac biet, tàu đặc biệt, tau dac biet
+つぎの | Tiếp theo / Kế tiếp | つぎの | Cụm từ | N5 | 次の駅で降ります。 | Xuống ở ga tiếp theo. | Bổ nghĩa cho danh từ đằng sau (Kanji: 次の) | tiếp theo, tiep theo, kế tiếp, ke tiep, sau, tiếp, tiep
+どういたしまして | Không có gì / Không sao đâu | どういたしまして | Cụm giao tiếp | N5 | 「ありがとう」「どういたしまして」 | "Cảm ơn" - "Không có gì ạ" | Câu trả lời lịch sự khi được người khác cảm ơn | không có gì, khong co gi, không sao, khong sao, không có gì đâu, khong co gi dau, không sao đâu, khong sao dau
+ばんせん | Sân ga số... / Tuyến số... | ばんせん | Hậu tố | N5 | 1番線に乗ります。 | Lên tàu ở sân ga số 1. | Đơn vị chỉ số hiệu đường ray / sân ga tàu (Kanji: -番線) | sân ga, san ga, sân ga số, san ga so, tuyến số, tuyen so, đường ray số, duong ray so
